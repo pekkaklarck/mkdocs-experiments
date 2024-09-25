@@ -3,6 +3,8 @@
 Experimenting using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) 
 as a documentation platform for Robot Framework User Guide.
 
+See the generated pages at https://pekkaklarck.github.io/rf-uk-mkdocs/.
+
 Based on an [introduction video](https://www.youtube.com/watch?v=Q-YA_dA8C20)
 linked from Material for MkDocs pages. Initial project configuration was
 copied from the [example project](https://github.com/james-willett/mkdocs-material-youtube-tutorial)
