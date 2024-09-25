@@ -1,9 +1,16 @@
-site_name: Robot Framework User Guide
+site_name: User Guide
+repo_url: https://github.com/robotframework/robotframework
 theme:
   name: material
+  site_url: https://pekkaklarck.github.io/rf-uk-mkdocs/
+  logo: robot-framework-white.png
+  favicon: robot-framework.png
+  icon:
+    repo: fontawesome/brands/github
   features:
 #    - navigation.tabs
     - navigation.sections
+    - navigation.footer
     - toc.integrate
     - navigation.top
     - search.suggest
@@ -17,13 +24,13 @@ theme:
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-      primary: teal
+      primary: cyan
       accent: purple
     - scheme: slate
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-      primary: teal
+      primary: cyan
       accent: lime
 
 plugins:
@@ -32,6 +39,8 @@ plugins:
 
 extra:
   social:
+    - icon: fontawesome/brands/slack
+      link: https://slack.robotframework.org
     - icon: fontawesome/brands/github-alt
       link: https://github.com/robotframework/robotframework
 
