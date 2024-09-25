@@ -1,18 +1,24 @@
-site_name: User Guide
+site_name: Robot Framework User Guide
+site_description: Robot Framework is a generic open source automation framework.
 repo_url: https://github.com/robotframework/robotframework
+copyright: |
+  &copy; 2024- <a href="https://robotframework.org/foundation" target="_blank" rel="noopener">Robot Framework Foundation</a>
+
+extra_css:
+  - styles/extra.css
 theme:
   name: material
   site_url: https://pekkaklarck.github.io/rf-uk-mkdocs/
-  logo: robot-framework-white.png
-  favicon: robot-framework.png
+  logo: styles/logo-white.png
+  favicon: styles/logo.png
   icon:
     repo: fontawesome/brands/github
   features:
 #    - navigation.tabs
     - navigation.sections
     - navigation.footer
-    - toc.integrate
     - navigation.top
+    - toc.integrate
     - search.suggest
     - search.highlight
     - content.tabs.link
@@ -20,18 +26,26 @@ theme:
     - content.code.copy
   language: en
   palette:
-    - scheme: default
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: custom
       toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-      primary: cyan
-      accent: purple
-    - scheme: slate
-      toggle:
-        icon: material/toggle-switch
+        icon: material/brightness-auto
         name: Switch to light mode
-      primary: cyan
-      accent: lime
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: custom
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: custom
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
 
 plugins:
   - social
@@ -45,6 +59,8 @@ extra:
       link: https://github.com/robotframework/robotframework
 
 markdown_extensions:
+  - toc:
+      permalink: true
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -60,6 +76,3 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-
-copyright: |
-  &copy; 2024- <a href="https://robotframework.org/foundation" target="_blank" rel="noopener">Robot Framework Foundation</a>
