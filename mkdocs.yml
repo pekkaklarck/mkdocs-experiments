@@ -1,5 +1,10 @@
 site_name: Robot Framework Manual
 site_description: Robot Framework is a generic open source automation framework.
+site_url: https://pekkaklarck.github.io/rf-uk-mkdocs/
+repo_url: https://github.com/robotframework/robotframework
+copyright: |
+  &copy; 2024- <a href="https://robotframework.org/foundation" target="_blank" rel="noopener">Robot Framework Foundation</a>
+
 nav:
   - Welcome: index.md
   - Using:
@@ -11,12 +16,10 @@ nav:
     - Creating libraries: extending/libraries.md
   - API:
     - api/index.md
-repo_url: https://github.com/robotframework/robotframework
-copyright: |
-  &copy; 2024- <a href="https://robotframework.org/foundation" target="_blank" rel="noopener">Robot Framework Foundation</a>
 
 extra_css:
   - styles/extra.css
+
 theme:
   name: material
   site_url: https://pekkaklarck.github.io/rf-uk-mkdocs/
