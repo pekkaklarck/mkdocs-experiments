@@ -63,8 +63,10 @@ theme:
         name: Switch to system preference
 
 plugins:
-  - social
   - search
+  - social:
+      cards_layout_options:
+        background_color: "#00c0b5"
 
 extra:
   social:
