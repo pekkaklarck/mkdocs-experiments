@@ -1,5 +1,9 @@
 # Welcome
 
+:blue_book: Welcome to Robot Framework Manual! :open_book:
+
+The Manual is generated from Markdown sources at https://github.com/pekkaklarck/rf-uk-mkdocs/.
+
 Here's a simple Robot Framework example to get us started! :rocket:
 
 ```robotframework
