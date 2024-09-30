@@ -1,5 +1,16 @@
 site_name: Robot Framework Manual
 site_description: Robot Framework is a generic open source automation framework.
+nav:
+  - Welcome: index.md
+  - Using:
+    - using/index.md
+    - Input data: using/data.md
+    - Executing tests and tasks: using/execution.md
+  - Extending:
+    - extending/index.md
+    - Creating libraries: extending/libraries.md
+  - API:
+    - api/index.md
 repo_url: https://github.com/robotframework/robotframework
 copyright: |
   &copy; 2024- <a href="https://robotframework.org/foundation" target="_blank" rel="noopener">Robot Framework Foundation</a>
@@ -14,10 +25,11 @@ theme:
   icon:
     repo: fontawesome/brands/github
   features:
-#    - navigation.tabs
+    - navigation.tabs
     - navigation.sections
     - navigation.footer
     - navigation.top
+    - navigation.indexes
     - toc.integrate
     - search.suggest
     - search.highlight
