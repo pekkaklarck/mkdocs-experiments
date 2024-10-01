@@ -4,6 +4,8 @@ site_url: https://pekkaklarck.github.io/rf-uk-mkdocs/
 repo_url: https://github.com/robotframework/robotframework
 copyright: |
   &copy; 2024- <a href="https://robotframework.org/foundation" target="_blank" rel="noopener">Robot Framework Foundation</a>
+watch:
+  - src/robot/
 
 nav:
   - Welcome: index.md
@@ -69,6 +71,15 @@ plugins:
       cards_layout_options:
         background_color: "#00c0b5"
   - autorefs
+  - mkdocstrings:
+      handlers:
+        python:
+          paths:
+            - src
+          import:
+            - https://docs.python.org/3/objects.inv
+          inherited_members: true
+          show_if_no_docstring: true
   - ezglossary:
       use_default: true
       tooltip: full
