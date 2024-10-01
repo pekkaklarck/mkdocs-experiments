@@ -4,6 +4,8 @@ The Manual is generated from Markdown sources at https://github.com/pekkaklarck/
 
 :blue_book: :open_book:
 
+## Code snippets
+
 Here's a simple Robot Framework example to get us started! :rocket:
 
 ```robotframework
@@ -19,9 +21,30 @@ def example():
     print('Hello, world!')
 ```
 
-Here's a link to [another page](using/data.md). And here's another to
-link directly to a [section](using/data.md#json-format). Below we have an image.
+## Links
 
+Standard Markdown syntax:
+
+- Link to [section](#code-snippets) on the same page.
+- Link to [another page](using/data.md).
+- Link to a [section](using/data.md#json-format) on another page.
+- Link to a [different site](http://robotframework).
+- Link to a [custom target][].
+- Link to a custom target having a [custom text][custom target].
+- Link to [somewhere](#code-snippets "This is a title") with a title.
+
+[custom target]: http://robotframework.org
+
+Features provided by the [autorefs](https://mkdocstrings.github.io/autorefs/) plugin:
+
+- Link to [header][code-snippets] on the same page.
+- Link to a [section][json-format] on another page.
+- Link to a [custom anchor][custom-anchor].
+
+Below we have an image. It uses link-like syntax as well. It also has a custom
+anchor.
+
+[](){#custom-anchor}
 ![Logo](styles/logo.png)
 
 ## Glossary
