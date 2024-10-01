@@ -38,7 +38,7 @@ theme:
     - search.suggest
     - search.highlight
     - content.tabs.link
-    - content.code.annotation
+    - content.code.annotate
     - content.code.copy
   language: en
   palette:
@@ -91,7 +91,10 @@ markdown_extensions:
   - toc:
       permalink: true
   - pymdownx.highlight:
+      linenums: true
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.arithmatex:

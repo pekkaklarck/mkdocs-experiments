@@ -11,8 +11,12 @@ Here's a simple Robot Framework example to get us started! :rocket:
 ```robotframework
 *** Test Case ***
 Example
-    Log    Hello, world!
+    Log    Hello, world!    # (1)!
 ```
+
+1. Code annotations work also with :robot: examples! :exploding_head:
+
+Did you see the plus sign above? It's a *code annotation*. Click it!
 
 And here's another example using :fontawesome-brands-python::
 
@@ -20,6 +24,11 @@ And here's another example using :fontawesome-brands-python::
 def example():
     print('Hello, world!')
 ```
+
+Another Python example using just indentation:
+
+    def example():
+        print('Hello, world!')
 
 ## Links
 
