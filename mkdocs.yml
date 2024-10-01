@@ -16,6 +16,7 @@ nav:
     - Creating libraries: extending/libraries.md
   - API:
     - api/index.md
+  - Glossary: glossary.md
 
 extra_css:
   - styles/extra.css
@@ -67,6 +68,12 @@ plugins:
   - social:
       cards_layout_options:
         background_color: "#00c0b5"
+  - ezglossary:
+      use_default: true
+      tooltip: full
+      # 'list' should give more information that 'short', but it doesn't work
+      # https://github.com/realtimeprojects/mkdocs-ezglossary/issues/19
+      inline_refs: short
 
 extra:
   social:
@@ -78,6 +85,7 @@ extra:
 markdown_extensions:
   - admonition
   - attr_list
+  - def_list
   - footnotes
   - toc:
       permalink: true

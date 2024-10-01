@@ -24,9 +24,21 @@ link directly to a [section](using/data.md#json-format). Below we have an image.
 
 ![Logo](styles/logo.png)
 
+## Glossary
+
+<Keyword:> is an important term for us. We'd also like to use it case-insensitively
+like <keyword:>, but apparently that [doesn't work](https://github.com/realtimeprojects/mkdocs-ezglossary/issues/21).
+<Library keyword:> is an important term as well.
+
+## Notes
+
 !!! note
 
     Content is only for testing purposes.
+
+    ```python
+    a = 1 + 2    # superfences!
+    ```
 
 !!! warning
 
