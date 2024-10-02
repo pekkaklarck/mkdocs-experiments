@@ -19,5 +19,9 @@ jobs:
           path: .cache
       - run: pip install "mkdocs-material[imaging]"
       - run: pip install "mkdocstrings[python]"
+      - run: pip install mkdocs-gen-files
+      - run: pip install mkdocs-literate-nav
+      - run: pip install mkdocs-section-index
+      - run: pip install mkdocs-exclude
       - run: pip install mkdocs-ezglossary-plugin
       - run: mkdocs gh-deploy --force

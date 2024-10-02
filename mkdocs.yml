@@ -17,8 +17,7 @@ nav:
   - Extending:
     - extending/index.md
     - Creating libraries: extending/libraries.md
-  - API:
-    - api/index.md
+  - API: api/
   - Glossary: glossary.md
 
 extra_css:
@@ -73,6 +72,15 @@ plugins:
       cards_layout_options:
         background_color: "#00c0b5"
   - autorefs
+  - exclude:
+      glob:
+        - api/generate.py
+  - gen-files:
+      scripts:
+        - docs/api/generate.py
+  - literate-nav:
+      nav_file: nav.md
+  - section-index
   - mkdocstrings:
       handlers:
         python:
@@ -80,8 +88,9 @@ plugins:
             - src
           import:
             - https://docs.python.org/3/objects.inv
-          inherited_members: true
-          show_if_no_docstring: true
+          options:
+            inherited_members: true
+            show_symbol_type_heading: true
   - ezglossary:
       use_default: true
       tooltip: full
