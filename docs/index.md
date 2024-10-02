@@ -25,10 +25,13 @@ def example():
     print('Hello, world!')
 ```
 
-Another Python example using just indentation:
+Above examples used fenced code blocks. Here's another Python example using
+a simple indented code block:
 
     def example():
-        print('Hello, world!')
+        print('Hello, world!')    # (1)!
+
+1. Python is the default language for intended code blocks.
 
 ## Links
 
@@ -50,6 +53,12 @@ Features provided by the [autorefs](https://mkdocstrings.github.io/autorefs/) pl
 - Link to a [section][json-format] on another page.
 - Link to a [custom anchor][custom-anchor].
 
+Features provided by the [MagicLink](https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/) plugin:
+
+- URIs like http://robotframework.org are converted to links.
+- Repository URIs like https://github.com/facelessuser/pymdown-extensions are shortened.
+- With a bit of configuration, issues like #42 and users like @pekkaklarck become links as well!
+
 Below we have an image. It uses link-like syntax as well. It also has a custom
 anchor.
 
@@ -62,20 +71,52 @@ anchor.
 like <keyword:>, but apparently that [doesn't work](https://github.com/realtimeprojects/mkdocs-ezglossary/issues/21).
 <Library keyword:> is an important term as well.
 
-## Notes
+## Tabs
+
+=== "Tab 1"
+    Tabs can be really useful for us!
+
+=== "Tab 2"
+    Markdown **content**.
+
+    - list item a
+    - list item b
+    - :tada:
+
+=== "Library"
+
+    ```python
+    def greet(name):
+        print(f'Hello, {name}!')
+    ```
+
+=== "Test Case"
+
+    ```robotframework
+    *** Test Cases ***
+    Example
+        Greet    Robot
+    ```
+
+## Admonitions
 
 !!! note
 
-    Content is only for testing purposes.
+    All this content is only for experimenting purposes.
 
     ```python
     a = 1 + 2    # superfences!
     ```
 
-!!! warning
+!!! tip
 
-    Did you read the above?
+    Sorry, no real tips to share.
 
-!!! quote "Is this the end?"
+??? quote "Collapsed!"
 
-    No, this is just the beginning!
+    Collapsible admonitions are provided by the `details` plugin.
+
+???+ success
+
+    Collapsible admonitions can be initially expendad.
+

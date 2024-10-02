@@ -2,6 +2,7 @@ site_name: Robot Framework Manual
 site_description: Robot Framework is a generic open source automation framework.
 site_url: https://pekkaklarck.github.io/rf-uk-mkdocs/
 repo_url: https://github.com/robotframework/robotframework
+edit_uri: https://github.com/pekkaklarck/rf-uk-mkdocs/blob/main/docs
 copyright: |
   &copy; 2024- <a href="https://robotframework.org/foundation" target="_blank" rel="noopener">Robot Framework Foundation</a>
 watch:
@@ -39,9 +40,10 @@ theme:
     - toc.integrate
     - search.suggest
     - search.highlight
-    - content.tabs.link
+    - content.action.edit
     - content.code.annotate
     - content.code.copy
+    - content.tabs.link
   language: en
   palette:
     # Palette toggle for automatic mode
@@ -101,6 +103,12 @@ markdown_extensions:
   - footnotes
   - toc:
       permalink: true
+  # PyMdown Extensions we use (there are more)
+  # https://facelessuser.github.io/pymdown-extensions/
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       default_lang: python
       linenums: true
@@ -108,13 +116,13 @@ markdown_extensions:
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
+  - pymdownx.magiclink:
+      repo_url_shortener: true
+      repo_url_shorthand: true
+      user: robotframework
+      repo: robotframework
+  - pymdownx.saneheaders
   - pymdownx.snippets
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.details
   - pymdownx.superfences
-  - pymdownx.mark
-  - pymdownx.magiclink
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
