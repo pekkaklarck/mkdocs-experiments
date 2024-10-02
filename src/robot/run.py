@@ -35,16 +35,6 @@ import sys
 from pathlib import Path
 from typing import Any
 
-if __name__ == '__main__' and 'robot' not in sys.modules:
-    import pythonpathsetter
-
-from robot.conf import RobotSettings
-from robot.model import ModelModifier
-from robot.output import LOGGER, pyloggingconf
-from robot.reporting import ResultWriter
-from robot.running.builder import TestSuiteBuilder
-from robot.utils import Application, text
-
 
 USAGE = """Robot Framework -- A generic automation framework
 
@@ -428,7 +418,7 @@ $ robot tests.robot
 """
 
 
-class RobotFramework(Application):
+class RobotFramework:
 
     def __init__(self):
         super().__init__(USAGE, arg_limits=(1,), env_options='ROBOT_OPTIONS',

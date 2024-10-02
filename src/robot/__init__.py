@@ -18,31 +18,31 @@
 The command line entry points provided by the framework are exposed for
 programmatic usage as follows:
 
-  * :func:`~robot.run.run`: Function to run tests.
-  * :func:`~robot.run.run_cli`: Function to run tests
+  * [robot.run][robot.run.run]: Function to run tests.
+  * [robot.run_cli][robot.run.run_cli]: Function to run tests
     with command line argument processing.
-  * :func:`~robot.rebot.rebot`: Function to post-process outputs.
-  * :func:`~robot.rebot.rebot_cli`: Function to post-process outputs
+  * `robot.rebot`: Function to post-process outputs.
+  * `robot.rebot_cli`: Function to post-process outputs
     with command line argument processing.
-  * :mod:`~robot.libdoc`: Module for library documentation generation.
-  * :mod:`~robot.testdoc`: Module for test case documentation generation.
+  * `robot.libdoc`: Module for library documentation generation.
+  * `robot.testdoc`: Module for test case documentation generation.
 
-All the functions above can be imported like ``from robot import run``.
+All the functions above can be imported like `#!py from robot import run`.
 Functions and classes provided by the modules need to be imported like
-``from robot.libdoc import libdoc_cli``.
+`#!py from robot.libdoc import libdoc_cli`.
 
 The functions and modules listed above are considered stable. Other modules in
 this package are for internal usage and may change without prior notice.
 
-.. tip:: More public APIs are exposed by the :mod:`robot.api` package.
+!!! tip
+
+    More public APIs are exposed by the [robot.api][] package.
 """
 
 import sys
 import warnings
 
-from robot.rebot import rebot, rebot_cli
-from robot.run import run, run_cli
-from robot.version import get_version
+from .run import run, run_cli
 
 
 # Avoid warnings when using `python -m robot.run`.
@@ -51,5 +51,4 @@ if not sys.warnoptions:
     warnings.filterwarnings('ignore', category=RuntimeWarning, module='runpy')
 
 
-__all__ = ['run', 'run_cli', 'rebot', 'rebot_cli']
-__version__ = get_version()
+__version__ = '0.1'
