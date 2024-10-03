@@ -1,18 +1,14 @@
-# Robot Framework User Guide with Material for MkDocs
+# Robot Framework Manual with Material for MkDocs
 
 Experimenting using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) 
-as a documentation platform for Robot Framework User Guide.
+as a documentation platform for Robot Framework Manual that is planned to
+replace the current [Robot Framework User Guide](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html).
 
-See the generated pages at https://pekkaklarck.github.io/rf-uk-mkdocs/.
+This repository is mainly a playground for testing various features. There will
+be a separate repository for real content and final plan is to merge it to
+Robot Framework main repository.
 
-Based on an [introduction video](https://www.youtube.com/watch?v=Q-YA_dA8C20)
-linked from Material for MkDocs pages. Initial project configuration was
-copied from the [example project](https://github.com/james-willett/mkdocs-material-youtube-tutorial)
-in the aforementioned tutorial video.
-
-Actual content has been copied from a [separate project](https://github.com/alexkread/rfuserguide/)
-where the [current User Guide](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html)
-is converted from reStructuredText to Markdown and also enhanced otherwise. 
+See the generated pages at https://pekkaklarck.github.io/mkdocs-experiments/.
 
 Installations:
 
