@@ -2,7 +2,7 @@
 
 The Manual is generated from Markdown sources at https://github.com/pekkaklarck/rf-uk-mkdocs/.
 
-:blue_book: :open_book:
+:blue_book: :open_book: :book:
 
 ## Code snippets
 
