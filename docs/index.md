@@ -2,7 +2,7 @@
 
 The Manual is generated from Markdown sources at https://github.com/pekkaklarck/rf-uk-mkdocs/.
 
-:blue_book: :open_book: :book:
+:blue_book: :open_book:
 
 ## Code snippets
 
@@ -31,7 +31,7 @@ a simple indented code block:
     def example():
         print('Hello, world!')    # (1)!
 
-1. Python is the default language for intended code blocks.
+1. Python is configured to be the default language for intended code blocks.
 
 ## Links
 
@@ -67,14 +67,16 @@ anchor.
 
 ## Glossary
 
-<Keyword:> is an important term for us. We'd also like to use it case-insensitively
-like <keyword:>, but apparently that [doesn't work](https://github.com/realtimeprojects/mkdocs-ezglossary/issues/21).
-<Library keyword:> is an important term as well.
+It is convenient to refer to terms in the [glossary](glossary.md) like <keyword:>. Unfortunately
+the term lookup is case-sensitive and doesn't handle plurals. <keyword:|Keyword>
+and <library keyword:|library keywords> are alternatives.
 
 ## Tabs
 
 === "Tab 1"
     Tabs can be really useful for us!
+
+    They are provided by the [pymdownx.tabbed](https://facelessuser.github.io/pymdown-extensions/extensions/tabbed) plugin.
 
 === "Tab 2"
     Markdown **content**.
@@ -110,13 +112,14 @@ like <keyword:>, but apparently that [doesn't work](https://github.com/realtimep
 
 !!! tip
 
-    Sorry, no real tips to share.
+    "Normal" admonitions are provided by the standard
+    [admonition](https://python-markdown.github.io/extensions/admonition/) plugin.
 
 ??? quote "Collapsed!"
 
-    Collapsible admonitions are provided by the `details` plugin.
+    Some initially hidden content here.
 
 ???+ success
 
-    Collapsible admonitions can be initially expendad.
-
+    Collapsible admonitions can be initially expendad. They are provided by
+    the [pymdownx.details](https://facelessuser.github.io/pymdown-extensions/extensions/details) plugin.
