@@ -19,7 +19,7 @@ src = root / 'src'
 nav = mkdocs_gen_files.Nav()
 
 # Add a navigation entry to the static `docs/api/index.md`.
-nav['api'] = 'index.md'
+nav['API'] = 'index.md'
 
 
 for path in sorted(src.rglob('*.py')):
