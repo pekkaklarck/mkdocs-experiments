@@ -1,6 +1,6 @@
 # Robot Framework Manual
 
-The Manual is generated from Markdown sources at https://github.com/pekkaklarck/rf-uk-mkdocs/.
+Click the edit button on right to see the source code.
 
 :blue_book: :open_book:
 
