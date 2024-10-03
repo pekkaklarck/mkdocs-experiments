@@ -16,4 +16,4 @@ is converted from reStructuredText to Markdown and also enhanced otherwise.
 
 Installations:
 
-    pip install "mkdocs-material[imaging]"
+    pip install -r requirements.txt
