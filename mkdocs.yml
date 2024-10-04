@@ -1,6 +1,6 @@
 site_name: Robot Framework Manual
 site_description: Robot Framework is a generic open source automation framework.
-site_url: https://github.com/pekkaklarck/mkdocs-experiments
+site_url: https://pekkaklarck.github.io/mkdocs-experiments
 repo_url: https://github.com/robotframework/robotframework
 edit_uri: https://github.com/pekkaklarck/mkdocs-experiments/blob/main/docs
 copyright: |
@@ -27,7 +27,6 @@ extra_css:
 
 theme:
   name: material
-  site_url: https://github.com/pekkaklarck/mkdocs-experiments
   logo: styles/logo-white.png
   favicon: styles/logo.png
   icon:
