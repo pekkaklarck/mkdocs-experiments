@@ -1,5 +1,4 @@
-name: Generate development version documentation
-
+name: Generate dev docs
 on:
   push:
     branches:

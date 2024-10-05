@@ -2,7 +2,7 @@
 
 Click the edit button on right to see the source code.
 
-:blue_book: :open_book:
+:blue_book: :open_book: :smile:
 
 ## Code snippets
 
