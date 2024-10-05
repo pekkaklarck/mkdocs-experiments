@@ -5,3 +5,4 @@ mkdocs-literate-nav
 mkdocs-section-index
 mkdocs-exclude
 mkdocs-ezglossary-plugin
+mike

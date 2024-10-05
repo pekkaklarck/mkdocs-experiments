@@ -31,4 +31,5 @@ jobs:
           path: .cache
 
       - name: Deploy
-        run: mkdocs gh-deploy --force
+        run: mike deploy dev
+        #run: mkdocs gh-deploy --force
