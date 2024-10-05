@@ -5,7 +5,7 @@ Click the edit button on right to see the source code.
 :blue_book: :open_book: :smile:
 
 Versioning ought to work now! :tada: Starting from v0.6, there should be
-a warning when viewing older docs.
+a warning when viewing older docs. Well, at least in theory there should be...
 
 ## Code snippets
 
