@@ -31,6 +31,7 @@ theme:
   favicon: styles/logo.png
   icon:
     repo: fontawesome/brands/github
+  custom_dir: overrides
   features:
     - navigation.tabs
     - navigation.sections
