@@ -2,7 +2,9 @@
 
 Click the edit button on right to see the source code.
 
-:blue_book: :open_book: :smile: :tada:
+:blue_book: :open_book: :smile:
+
+Versioning ought to work now! :tada:
 
 ## Code snippets
 
