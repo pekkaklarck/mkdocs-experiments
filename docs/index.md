@@ -6,7 +6,7 @@ Click the edit button on right to see the source code.
 
 Versioning ought to work now! :tada: Starting from v0.6, there should be
 a warning when viewing older docs. Well, at least in theory there should be.
-At the moment it seems to be shown only when viewing the `dev` version.
+At the moment it seems to be shown only when viewing the `dev` version. :frowning_face:
 
 ## Code snippets
 
