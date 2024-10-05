@@ -31,5 +31,8 @@ jobs:
           path: .cache
 
       - name: Deploy
-        run: mike deploy dev
+        run: |
+          git config user.name doc-bot
+          git config user.email doc@bot
+          mike deploy dev
         #run: mkdocs gh-deploy --force
