@@ -1,0 +1,2411 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Robot Framework is a generic open source automation framework.">
+      
+      
+      
+        <link rel="canonical" href="https://pekkaklarck.github.io/mkdocs-experiments/latest/using/data/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../execution/">
+      
+      
+      <link rel="icon" href="../../styles/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Input data - Robot Framework Manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../styles/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Input data - Robot Framework Manual" >
+      
+        <meta  property="og:description"  content="Robot Framework is a generic open source automation framework." >
+      
+        <meta  property="og:image"  content="https://pekkaklarck.github.io/mkdocs-experiments/latest/assets/images/social/using/data.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://pekkaklarck.github.io/mkdocs-experiments/latest/using/data/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Input data - Robot Framework Manual" >
+      
+        <meta  name="twitter:description"  content="Robot Framework is a generic open source automation framework." >
+      
+        <meta  name="twitter:image"  content="https://pekkaklarck.github.io/mkdocs-experiments/latest/assets/images/social/using/data.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#input-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+  📢 &nbsp; I'm an announcement! You can dismiss me and I return only if I'm changed.
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You are not viewing documentation of the latest release.
+  <a href="../../..">
+    <strong>Click here to open it.</strong>
+  </a>
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Robot Framework Manual" class="md-header__button md-logo" aria-label="Robot Framework Manual" data-md-component="logo">
+      
+  <img src="../../styles/logo-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Robot Framework Manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Input data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/robotframework/robotframework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../" class="md-tabs__link">
+        
+  
+    
+  
+  Using
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../libraries/" class="md-tabs__link">
+        
+  
+    
+  
+  Standard libraries
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../extending/" class="md-tabs__link">
+        
+  
+    
+  
+  Extending
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../api/" class="md-tabs__link">
+          
+  
+    
+  
+  API
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../glossary/" class="md-tabs__link">
+        
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Robot Framework Manual" class="md-nav__button md-logo" aria-label="Robot Framework Manual" data-md-component="logo">
+      
+  <img src="../../styles/logo-white.png" alt="logo">
+
+    </a>
+    Robot Framework Manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/robotframework/robotframework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Using
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Using
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Input data
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Input data
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#input-data-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input data syntax
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files-and-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Files and directories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-data-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input data sections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-file-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported file formats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported file formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#space-separated-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Space separated format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipe-separated-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipe separated format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restructuredtext-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      reStructuredText format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON format
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JSON format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#converting-suite-to-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      Converting suite to JSON
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-suite-from-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating suite from JSON
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executing-json-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executing JSON files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjusting-suite-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjusting suite source
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rules-for-parsing-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rules for parsing the data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rules for parsing the data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ignored-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ignored data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escaping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escaping
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Escaping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escaping-special-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escaping special characters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forming-escape-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forming escape sequences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-empty-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling empty values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling spaces
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dividing-data-to-several-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dividing data to several rows
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#localization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Localization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Localization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabling-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling languages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enabling languages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-command-line-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using command line option
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-file-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-file configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#built-in-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built-in languages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-language-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom language files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contributing-translations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contributing translations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../execution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Executing tests and tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../libraries/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standard libraries
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../extending/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Extending
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Extending
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extending/libraries/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating libraries
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../api/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../api/robot/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> robot
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> robot
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../api/robot/api/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> api
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> api
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/robot/api/interfaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/robot/run/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> run
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/pekkaklarck/mkdocs-experiments/blob/main/docs/using/data.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="input-data">Input data<a class="headerlink" href="#input-data" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="#input-data-syntax">Input data syntax</a></li>
+<li><a href="#files-and-directories">Files and directories</a></li>
+<li><a href="#input-data-sections">Input data sections</a></li>
+<li><a href="#supported-file-formats">Supported file formats</a></li>
+<li><a href="#rules-for-parsing-the-data">Rules for parsing the data</a></li>
+<li><a href="#localization">Localization</a></li>
+</ul>
+<h2 id="input-data-syntax">Input data syntax<a class="headerlink" href="#input-data-syntax" title="Permanent link">&para;</a></h2>
+<p>This section covers Robot Framework's overall input data syntax. Input data being 
+- test data to support test cases
+- initial imported data, separated from tasks script code, for Robotic Process Automation (RPA) script use</p>
+<h2 id="files-and-directories">Files and directories<a class="headerlink" href="#files-and-directories" title="Permanent link">&para;</a></h2>
+<p>The hierarchical structure for arranging test cases/RPA tasks is designed as follows:</p>
+<ul>
+<li>Test cases/RPA tasks are created in <code>suite files</code>.</li>
+<li>A test case file automatically creates a <code>test suite</code> containing
+  the test cases/tasks in that file.</li>
+<li>An RPA task file automatically creates a <code>task suite</code>containing
+  the tasks in that file.</li>
+<li>A directory containing test case/task files forms a higher-level 
+  suite. Such a <code>suite directory</code> has suites created from test
+  case/task files as its child suites.</li>
+<li>A suite directory can also contain other suite directories,
+  and this hierarchical structure can be as deeply nested as needed.</li>
+<li>Suite directories can have a special <code>initialization file</code>
+  configuring the created test suite.</li>
+</ul>
+<p>In addition, there are:
+- <code>Libraries</code> containing the lowest-level keywords.
+- <code>Resource files</code> with <code>variables</code> and higher-level <code>user keywords</code>.
+- <code>Variable files</code> to provide more flexible ways to create variables than resource files.</p>
+<p>Test case files, RPA suite files, suite initialization files and resource files are all created using Robot Framework input data syntax, whereas Libraries and variable files are created using "real" programming languages (most often, Python).</p>
+<h2 id="input-data-sections">Input data sections<a class="headerlink" href="#input-data-sections" title="Permanent link">&para;</a></h2>
+<p>Robot Framework input data is defined in different sections, often also
+called tables, listed below:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Section</th>
+<th style="text-align: left;">Used for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Settings</td>
+<td style="text-align: left;"><p>1) Importing <code>test libraries</code>, <code>resource files</code> and <code>variable files</code>.<br />2) Defining metadata for <code>test suites</code>and <code>test cases</code>.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Variables</td>
+<td style="text-align: left;">Defining <code>variables</code> that can be used elsewhere in the input data.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Test Cases</td>
+<td style="text-align: left;"><code>Creating test cases</code> from available keywords.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Tasks</td>
+<td style="text-align: left;"><code>Creating tasks</code> using available keywords. Single file can only contain either tests or tasks.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Keywords</td>
+<td style="text-align: left;"><code>Creating user keywords</code> from existing lower-level keywords</td>
+</tr>
+<tr>
+<td style="text-align: left;">Comments</td>
+<td style="text-align: left;">Additional comments or data. Ignored by Robot Framework.</td>
+</tr>
+</tbody>
+</table>
+<p>Different sections are recognized by their header row and the recommended header format is <code>*** Settings ***</code>. The header is case-insensitive, surrounding spaces are optional and the number of asterisk characters can
+vary as long as there is at least one asterisk at the beginning. For example, also <code>*settings</code> would be recognized as a valid section header.</p>
+<hr />
+<details>
+  <summary>&#129302; <b><i>EXAMPLE:</i></b></summary>
+
+   <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">***</span> <span class="n">Settings</span> <span class="o">***</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">Library</span>    <span class="n">BuiltIn</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="o">**</span> <span class="n">Variables</span> <span class="o">***</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="err">$</span><span class="p">{</span><span class="n">variable_name_here</span><span class="p">}</span>     <span class="n">variable_value_here</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<p><br /></p>
+<p>The header row can also contain other data besides that of the actual section header.
+The extra data must be separated from the section header using the data format dependent separator (typically two or more spaces). These extra headers are ignored at parsing time, but they can be used for documenting
+purposes. This is especially useful when creating test cases using the
+<code>data-driven style</code>.</p>
+<hr />
+<details>
+  <summary>&#129302; <b><i>EXAMPLE:</i></b></summary>
+
+   <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="o">***</span> <span class="n">Settings</span> <span class="o">***</span>    <span class="n">EU</span> <span class="n">language</span> <span class="n">support</span> <span class="n">ok</span><span class="p">,</span> <span class="n">South</span> <span class="n">America</span> <span class="o">&amp;</span> <span class="n">Antarctica</span> <span class="n">to</span> <span class="n">be</span> <span class="n">added</span> <span class="n">Release</span> <span class="mf">2.0</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<p><br /></p>
+<blockquote>
+<p>&#128226; <em><strong>NOTE:</strong> Any data which may be entered before the first section is ignored.</em><br />
+&#128226; <em><strong>NOTE:</strong> Section headers can be localized. See the Translations appendix for supported translations.</em></p>
+</blockquote>
+<h2 id="supported-file-formats">Supported file formats<a class="headerlink" href="#supported-file-formats" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>TODO:</strong>  stylise each of the file extension mentions  </p>
+</blockquote>
+<p>The most common approach to create Robot Framework input data is using the
+<code>space separated format</code> where pieces of the input data, such as keywords
+and their arguments, are separated from each other with two or more spaces.
+An alternative is using the <code>pipe separated format</code> where the separator is
+the pipe character surrounded with spaces (<code>|</code>).</p>
+<p>Suite files typically use the <code>.robot</code> file extension, but which files are
+parsed <code>can be configured</code>. <code>Resource files</code> can use the <code>.robot</code> file extension as well, but using the dedicated <code>.resource</code> file extension is
+recommended. Files containing non-ASCII characters must be saved using the UTF-8 encoding.</p>
+<blockquote>
+<p><strong>HACK:</strong> removed "and may be mandated in the future" from above!</p>
+</blockquote>
+<p>Robot Framework supports also reStructuredText files so that normal
+input data is <code>embedded into code blocks</code>. Only files with
+the <code>.robot.rst</code> file extension are parsed by default. If you would
+rather use just <code>.rst</code> or <code>.rest</code>file extensions, they need to be
+configured separately.</p>
+<blockquote>
+<p><strong>TODO:</strong>  how to configure this is missing above!</p>
+</blockquote>
+<p>Input data can also be created in the <code>JSON format</code> that is targeted
+more for tool developers than normal Robot Framework users. Only JSON files
+with the custom <code>.rbt</code> file extension are parsed by default.</p>
+<blockquote>
+<p><strong>TODO:</strong>  what does "tool developer" mean here above?</p>
+</blockquote>
+<p>Earlier Robot Framework versions also supported input data in HTML and TSV formats. The TSV format still works if the input data is compatible with the <code>space separated format</code>, but the support for the HTML format has been removed altogether.</p>
+<p>If you encounter such input data files, you need to convert them to the plain text format to be able to use them with Robot Framework. The easiest
+way to do that is using the <code>Tidy</code> tool, but you must use the version included with Robot Framework 3.1 because newer Robot Framework versions do not understand the HTML format at all.</p>
+<blockquote>
+<p><strong>TODO:</strong>  should we say why the HTML was removed here?</p>
+</blockquote>
+<h3 id="space-separated-format">Space separated format<a class="headerlink" href="#space-separated-format" title="Permanent link">&para;</a></h3>
+<p>When Robot Framework parses input data, it first splits the input data to lines and then those lines to tokens such as keywords and arguments. When using the space separated format, the separator between tokens is two or more spaces, or alternatively one or more tab characters. In addition to the normal ASCII space, any Unicode character considered to be a space (i.e. non-breaking space) works as a separator also. The number of spaces used as a separator can vary, as long as there are at least two, making it possible to nicely align the input data when it makes the input data easier to understand.</p>
+<hr />
+<details>
+  <summary>&#129302; <b><i>EXAMPLE:</i></b></summary>
+
+   <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="o">***</span> <span class="n">Settings</span> <span class="o">***</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">Documentation</span>     <span class="n">Example</span> <span class="n">using</span> <span class="n">the</span> <span class="n">space</span> <span class="n">separated</span> <span class="nb">format</span><span class="o">.</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">Library</span>           <span class="n">OperatingSystem</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="o">***</span> <span class="n">Variables</span> <span class="o">***</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="err">$</span><span class="p">{</span><span class="n">MESSAGE</span><span class="p">}</span>        <span class="n">Hello</span><span class="p">,</span> <span class="n">world</span><span class="err">!</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="o">***</span> <span class="n">Test</span> <span class="n">Cases</span> <span class="o">***</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">My</span> <span class="n">Test</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>    <span class="p">[</span><span class="n">Documentation</span><span class="p">]</span>    <span class="n">Example</span> <span class="n">test</span><span class="o">.</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a>    <span class="n">Log</span>    <span class="err">$</span><span class="p">{</span><span class="n">MESSAGE</span><span class="p">}</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a>    <span class="n">My</span> <span class="n">Keyword</span>    <span class="err">$</span><span class="p">{</span><span class="n">CURDIR</span><span class="p">}</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="n">Another</span> <span class="n">Test</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a>    <span class="n">Should</span> <span class="n">Be</span> <span class="n">Equal</span>    <span class="err">$</span><span class="p">{</span><span class="n">MESSAGE</span><span class="p">}</span>    <span class="n">Hello</span><span class="p">,</span> <span class="n">world</span><span class="err">!</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="o">***</span> <span class="n">Keywords</span> <span class="o">***</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="n">My</span> <span class="n">Keyword</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19"></a>    <span class="p">[</span><span class="n">Arguments</span><span class="p">]</span>    <span class="err">$</span><span class="p">{</span><span class="n">path</span><span class="p">}</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20"></a>    <span class="n">Directory</span> <span class="n">Should</span> <span class="n">Exist</span>    <span class="err">$</span><span class="p">{</span><span class="n">path</span><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<p><br /></p>
+<p>Because tabs and consecutive spaces are considered separators, they must
+be escaped if they are needed in keyword arguments or elsewhere
+in the actual input data. It is possible to use special escape sequences  such as <code>\t</code> for tab, <code>\xA0</code> for a non-breaking space or the <code>built-in variables</code> <code>${SPACE}</code> and <code>${EMPTY}</code>. Please See the <code>Escaping</code> section for more details.</p>
+<blockquote>
+<p>&#128226; _<strong>TIP:</strong> Although using two spaces as a separator is enough, it is recommended to use four spaces to make the separator easier to recognize.</p>
+</blockquote>
+<h3 id="pipe-separated-format">Pipe separated format<a class="headerlink" href="#pipe-separated-format" title="Permanent link">&para;</a></h3>
+<p>The biggest problem of the space separated format is that visually
+separating keywords from arguments can be tricky. This is a problem
+especially if keywords take a lot of arguments and/or arguments
+contain spaces. In such cases the pipe delimited variant can
+work better because it makes the separator more visibly clearer and obvious.</p>
+<p>One file can contain both space separated and pipe separated lines.
+Pipe separated lines are recognized by the mandatory leading pipe character,
+but the pipe at the end of the line is optional. There must always be at
+least one space or tab on both sides of the pipe except at the beginning and
+at the end of the line. There is no need to align the pipes, but often this does make the input data easier to read.</p>
+<hr />
+<details>
+  <summary>&#129302; <b><i>EXAMPLE:</i></b></summary>
+
+   <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="o">|</span> <span class="o">***</span> <span class="n">Settings</span> <span class="o">***</span>   <span class="o">|</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="o">|</span> <span class="n">Documentation</span>      <span class="o">|</span> <span class="n">Example</span> <span class="n">using</span> <span class="n">the</span> <span class="n">pipe</span> <span class="n">separated</span> <span class="nb">format</span><span class="o">.</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="o">|</span> <span class="n">Library</span>            <span class="o">|</span> <span class="n">OperatingSystem</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="o">|</span> <span class="o">***</span> <span class="n">Variables</span> <span class="o">***</span>  <span class="o">|</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="o">|</span> <span class="err">$</span><span class="p">{</span><span class="n">MESSAGE</span><span class="p">}</span>         <span class="o">|</span> <span class="n">Hello</span><span class="p">,</span> <span class="n">world</span><span class="err">!</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="o">|</span> <span class="o">***</span> <span class="n">Test</span> <span class="n">Cases</span> <span class="o">***</span> <span class="o">|</span>                 <span class="o">|</span>               <span class="o">|</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="o">|</span> <span class="n">My</span> <span class="n">Test</span>            <span class="o">|</span> <span class="p">[</span><span class="n">Documentation</span><span class="p">]</span> <span class="o">|</span> <span class="n">Example</span> <span class="n">test</span><span class="o">.</span> <span class="o">|</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="o">|</span>                    <span class="o">|</span> <span class="n">Log</span>             <span class="o">|</span> <span class="err">$</span><span class="p">{</span><span class="n">MESSAGE</span><span class="p">}</span>    <span class="o">|</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="o">|</span>                    <span class="o">|</span> <span class="n">My</span> <span class="n">Keyword</span>      <span class="o">|</span> <span class="err">$</span><span class="p">{</span><span class="n">CURDIR</span><span class="p">}</span>     <span class="o">|</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="o">|</span> <span class="n">Another</span> <span class="n">Test</span>       <span class="o">|</span> <span class="n">Should</span> <span class="n">Be</span> <span class="n">Equal</span> <span class="o">|</span> <span class="err">$</span><span class="p">{</span><span class="n">MESSAGE</span><span class="p">}</span>    <span class="o">|</span> <span class="n">Hello</span><span class="p">,</span> <span class="n">world</span><span class="err">!</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="o">|</span> <span class="o">***</span> <span class="n">Keywords</span> <span class="o">***</span>   <span class="o">|</span>                        <span class="o">|</span>         <span class="o">|</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="o">|</span> <span class="n">My</span> <span class="n">Keyword</span>         <span class="o">|</span> <span class="p">[</span><span class="n">Arguments</span><span class="p">]</span>            <span class="o">|</span> <span class="err">$</span><span class="p">{</span><span class="n">path</span><span class="p">}</span> <span class="o">|</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="o">|</span>                    <span class="o">|</span> <span class="n">Directory</span> <span class="n">Should</span> <span class="n">Exist</span> <span class="o">|</span> <span class="err">$</span><span class="p">{</span><span class="n">path</span><span class="p">}</span> <span class="o">|</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<p><br /></p>
+<p>When using the pipe separated format, consecutive spaces or tabs inside
+arguments do not need to be escaped. Similarly empty columns do not need
+to be escaped except <code>if they are at the end of the libe</code>. Possible pipes surrounded by spaces in the actual input data must be escaped with a backslash, however.</p>
+<hr />
+<details>
+  <summary>&#129302; <b><i>EXAMPLE:</i></b></summary>
+
+   <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="o">|</span> <span class="o">***</span> <span class="n">Test</span> <span class="n">Cases</span> <span class="o">***</span> <span class="o">|</span>                 <span class="o">|</span>                 <span class="o">|</span>                      <span class="o">|</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="o">|</span> <span class="n">Escaping</span> <span class="n">Pipe</span>      <span class="o">|</span> <span class="err">$</span><span class="p">{</span><span class="n">file</span> <span class="n">count</span><span class="p">}</span> <span class="o">=</span> <span class="o">|</span> <span class="n">Execute</span> <span class="n">Command</span> <span class="o">|</span> <span class="n">ls</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*.</span><span class="n">txt</span> \<span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span> <span class="o">|</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="o">|</span>                    <span class="o">|</span> <span class="n">Should</span> <span class="n">Be</span> <span class="n">Equal</span> <span class="o">|</span> <span class="err">$</span><span class="p">{</span><span class="n">file</span> <span class="n">count</span><span class="p">}</span>   <span class="o">|</span> <span class="mi">42</span>                   <span class="o">|</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<p><br /></p>
+<h3 id="restructuredtext-format">reStructuredText format<a class="headerlink" href="#restructuredtext-format" title="Permanent link">&para;</a></h3>
+<p><code>reStructuredText</code> (reST) is an easy-to-read plain text markup syntax that
+is commonly used for documentation of Python projects including Python itself. reST documents are most often compiled to HTML, but other output formats are supported also. Using reST with Robot Framework allows you to mix richly formatted documents and input data in a concise text format that is easy to work with using simple text editors, diff tools, and source control systems.</p>
+<blockquote>
+<p>&#128226; <em><strong>NOTE:</strong> Using reStructuredText</em> files with Robot Framework requires the Python <code>docutils</code> module to be installed.</p>
+</blockquote>
+<p>When using Robot Framework with reStructuredText files, normal input data is embedded into so called code blocks. In standard reST, code blocks are
+marked using the <code>code</code> directive, but Robot Framework also supports 
+<code>code-block</code> or <code>sourcecode</code> directives used by the <code>Sphinx</code> tool.</p>
+<blockquote>
+<p><strong>TODO:</strong>  normal input data used throughout here, better terminology or an initial explaination of this term would be good.</p>
+<p><strong>TODO:</strong>  this is the 1st time Sphinx is introduced. Explain what it is further.</p>
+</blockquote>
+<hr />
+<details>
+  <summary>&#129302; <b><i>EXAMPLE:</i></b></summary>
+
+   <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span>
+<span class="normal"><a href="#__codelineno-5-22">22</a></span>
+<span class="normal"><a href="#__codelineno-5-23">23</a></span>
+<span class="normal"><a href="#__codelineno-5-24">24</a></span>
+<span class="normal"><a href="#__codelineno-5-25">25</a></span>
+<span class="normal"><a href="#__codelineno-5-26">26</a></span>
+<span class="normal"><a href="#__codelineno-5-27">27</a></span>
+<span class="normal"><a href="#__codelineno-5-28">28</a></span>
+<span class="normal"><a href="#__codelineno-5-29">29</a></span>
+<span class="normal"><a href="#__codelineno-5-30">30</a></span>
+<span class="normal"><a href="#__codelineno-5-31">31</a></span>
+<span class="normal"><a href="#__codelineno-5-32">32</a></span>
+<span class="normal"><a href="#__codelineno-5-33">33</a></span>
+<span class="normal"><a href="#__codelineno-5-34">34</a></span>
+<span class="normal"><a href="#__codelineno-5-35">35</a></span>
+<span class="normal"><a href="#__codelineno-5-36">36</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a> <span class="n">This</span> <span class="n">text</span> <span class="ow">is</span> <span class="n">outside</span> <span class="n">code</span> <span class="n">blocks</span> <span class="ow">and</span> <span class="n">thus</span> <span class="n">ignored</span><span class="o">.</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a> <span class="o">..</span> <span class="n">code</span><span class="p">::</span> <span class="n">robotframework</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="o">***</span> <span class="n">Settings</span> <span class="o">***</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a>    <span class="n">Documentation</span>    <span class="n">Example</span> <span class="n">using</span> <span class="n">the</span> <span class="n">reStructuredText</span> <span class="nb">format</span><span class="o">.</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a>    <span class="n">Library</span>          <span class="n">OperatingSystem</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a>    <span class="o">***</span> <span class="n">Variables</span> <span class="o">***</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10"></a>    <span class="err">$</span><span class="p">{</span><span class="n">MESSAGE</span><span class="p">}</span>       <span class="n">Hello</span><span class="p">,</span> <span class="n">world</span><span class="err">!</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11"></a>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12"></a>    <span class="o">***</span> <span class="n">Test</span> <span class="n">Cases</span> <span class="o">***</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13"></a>    <span class="n">My</span> <span class="n">Test</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14"></a>        <span class="p">[</span><span class="n">Documentation</span><span class="p">]</span>    <span class="n">Example</span> <span class="n">test</span><span class="o">.</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15"></a>        <span class="n">Log</span>    <span class="err">$</span><span class="p">{</span><span class="n">MESSAGE</span><span class="p">}</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16"></a>        <span class="n">My</span> <span class="n">Keyword</span>    <span class="err">$</span><span class="p">{</span><span class="n">CURDIR</span><span class="p">}</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17"></a>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18"></a>    <span class="n">Another</span> <span class="n">Test</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19"></a>        <span class="n">Should</span> <span class="n">Be</span> <span class="n">Equal</span>    <span class="err">$</span><span class="p">{</span><span class="n">MESSAGE</span><span class="p">}</span>    <span class="n">Hello</span><span class="p">,</span> <span class="n">world</span><span class="err">!</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20"></a>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21"></a> <span class="n">Also</span> <span class="n">this</span> <span class="n">text</span> <span class="ow">is</span> <span class="n">outside</span> <span class="n">code</span> <span class="n">blocks</span> <span class="ow">and</span> <span class="n">ignored</span><span class="o">.</span> <span class="n">Code</span> <span class="n">blocks</span> <span class="ow">not</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22"></a> <span class="n">containing</span> <span class="nb">input</span> <span class="n">data</span> <span class="n">are</span> <span class="n">ignored</span> <span class="k">as</span> <span class="n">well</span><span class="o">.</span>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23"></a>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24"></a> <span class="o">..</span> <span class="n">code</span><span class="p">::</span> <span class="n">robotframework</span>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25"></a>
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26"></a>    <span class="c1"># Both space and pipe separated formats are supported.</span>
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27"></a>
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28"></a>    <span class="o">|</span> <span class="o">***</span> <span class="n">Keywords</span> <span class="o">***</span>  <span class="o">|</span>                        <span class="o">|</span>         <span class="o">|</span>
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29"></a>    <span class="o">|</span> <span class="n">My</span> <span class="n">Keyword</span>        <span class="o">|</span> <span class="p">[</span><span class="n">Arguments</span><span class="p">]</span>            <span class="o">|</span> <span class="err">$</span><span class="p">{</span><span class="n">path</span><span class="p">}</span> <span class="o">|</span>
+</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30"></a>    <span class="o">|</span>                   <span class="o">|</span> <span class="n">Directory</span> <span class="n">Should</span> <span class="n">Exist</span> <span class="o">|</span> <span class="err">$</span><span class="p">{</span><span class="n">path</span><span class="p">}</span> <span class="o">|</span>
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31"></a>
+</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32"></a> <span class="o">..</span> <span class="n">code</span><span class="p">::</span> <span class="n">python</span>
+</span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33"></a>
+</span><span id="__span-5-34"><a id="__codelineno-5-34" name="__codelineno-5-34"></a>    <span class="c1"># This code block is ignored.</span>
+</span><span id="__span-5-35"><a id="__codelineno-5-35" name="__codelineno-5-35"></a>    <span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
+</span><span id="__span-5-36"><a id="__codelineno-5-36" name="__codelineno-5-36"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, world!&#39;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<p><br /></p>
+<p>Robot Framework supports reStructuredText files using <code>.robot.rst</code>,
+<code>.rst</code> and <code>.rest</code> file extensions. To avoid parsing unrelated
+reStructuredText files, only files with the <code>.robot.rst</code> file extension
+are parsed by default when executing a directory. Parsing files with
+other file extensions <code>can be enabled</code> by using either :option:<code>--parseinclude</code>
+or :option:<code>--extension</code> option.</p>
+<blockquote>
+<p><strong>TODO:</strong>  though not in the runner/execution section, add an example block here.</p>
+</blockquote>
+<p>When Robot Framework parses reStructuredText files, errors below the level
+<code>SEVERE</code> are ignored to avoid noise about possible non-standard directives
+and other such markup. This may hide also real errors, but they can be seen
+when processing files using reStructuredText tooling normally.</p>
+<blockquote>
+<p><strong>TODO:</strong>  bit developer-y, need to link to the section on different output levels here. Re-word non-standard directives possibly too</p>
+</blockquote>
+<h3 id="json-format">JSON format<a class="headerlink" href="#json-format" title="Permanent link">&para;</a></h3>
+<p>Robot Framework also supports input data also in the <code>JSON</code> format. This format is designed typically more for tool developers than for regular Robot Framework users and it is not meant to be edited manually. Its most important use cases are:
+- Transferring input data between processes and machines. A suite can be converted to JSON on one machine and recreated back to a suite on another machine (serialization).
+- Saving a suite (possibly a nested suite), constructed from normal input data into a single JSON file which is faster to parse.
+- As an alternative input data format for external tools generating tests or tasks.</p>
+<h4 id="converting-suite-to-json">Converting suite to JSON<a class="headerlink" href="#converting-suite-to-json" title="Permanent link">&para;</a></h4>
+<p>A suite structure can be serialized into JSON by using the <code>TestSuite.to_json</code>
+method. When used without arguments, it returns JSON data as a string, but
+it also accepts a path or an open file where to write JSON data along with
+configuration options related to JSON formatting:</p>
+<hr />
+<details>
+  <summary>&#129302; <b><i>EXAMPLE:</i></b></summary>
+
+   <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">robot.running</span> <span class="kn">import</span> <span class="n">TestSuite</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="c1"># Create suite based on input data on the file system.</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="n">suite</span> <span class="o">=</span> <span class="n">TestSuite</span><span class="o">.</span><span class="n">from_file_system</span><span class="p">(</span><span class="s1">&#39;/path/to/data&#39;</span><span class="p">)</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="c1"># Get JSON data as a string.</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="n">data</span> <span class="o">=</span> <span class="n">suite</span><span class="o">.</span><span class="n">to_json</span><span class="p">()</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="c1"># Save JSON data to a file with custom indentation.</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="n">suite</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="s1">&#39;data.rbt&#39;</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<p><br /></p>
+<p>If you would rather work with Python data and then convert that to JSON
+or some other format yourself, you can use <code>TestSuite.to_dict</code> instead. For more information, please see: 
+- <a href="https://robot-framework.readthedocs.io/en/master/au_c/robot.running.html#robot.running.model.TestSuite.to_json">https://robot-framework.readthedocs.io/en/master/au_c/robot.running.html#robot.running.model.TestSuite.to_json</a>
+- <a href="https://robot-framework.readthedocs.io/en/master/au_c/robot.running.html#robot.running.model.TestSuite.to_dict">https://robot-framework.readthedocs.io/en/master/au_c/robot.running.html#robot.running.model.TestSuite.to_dict</a></p>
+<h4 id="creating-suite-from-json">Creating suite from JSON<a class="headerlink" href="#creating-suite-from-json" title="Permanent link">&para;</a></h4>
+<p>A suite can be constructed from JSON data using the <code>TestSuite.from_json</code> 
+method. It works both with JSON strings and paths to JSON files:</p>
+<hr />
+<details>
+  <summary>&#129302; <b><i>EXAMPLE:</i></b></summary>
+
+   <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">robot.running</span> <span class="kn">import</span> <span class="n">TestSuite</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="c1"># Create suite from JSON data in a file.</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="n">suite</span> <span class="o">=</span> <span class="n">TestSuite</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="s1">&#39;data.rbt&#39;</span><span class="p">)</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="c1"># Create suite from a JSON string.</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="n">suite</span> <span class="o">=</span> <span class="n">TestSuite</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="s1">&#39;{&quot;name&quot;: &quot;Suite&quot;, &quot;tests&quot;: [{&quot;name&quot;: &quot;Test&quot;}]}&#39;</span><span class="p">)</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="c1"># Execute suite. Notice that log and report needs to be created separately.</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="n">suite</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;example.xml&#39;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<p><br /></p>
+<p>If you have data as a Python dictionary, you can use <code>TestSuite.from_dict</code> instead. Regardless of how a suite is recreated, it exists only in memory and
+original data files on the file system are not recreated.</p>
+<p>As the above example demonstrates, the created suite can be executed using
+the <code>TestSuite.run</code> method. It may, however, be easier to execute a JSON file
+directly as explained in the following section.For more information, please see: </p>
+<ul>
+<li><a href="https://robot-framework.readthedocs.io/en/master/au_c/robot.running.html#robot.running.model.TestSuite.from_json">https://robot-framework.readthedocs.io/en/master/au_c/robot.running.html#robot.running.model.TestSuite.from_json</a></li>
+<li><a href="https://robot-framework.readthedocs.io/en/master/au_c/robot.running.html#robot.running.model.TestSuite.from_dict">https://robot-framework.readthedocs.io/en/master/au_c/robot.running.html#robot.running.model.TestSuite.from_dict</a></li>
+<li><a href="https://robot-framework.readthedocs.io/en/master/au_c/robot.running.html#robot.running.model.TestSuite.run">https://robot-framework.readthedocs.io/en/master/au_c/robot.running.html#robot.running.model.TestSuite.run</a></li>
+</ul>
+<blockquote>
+<p><strong>TODO:</strong>  Following section likely needs to point to a different chapter later<br />
+<strong>TODO:</strong>  Are these suite serialisations &amp; running topics related to test-data? are they in the best place here?<br />
+<strong>TODO:</strong>  Examples of JSON produced maybe useful here</p>
+</blockquote>
+<h4 id="executing-json-files">Executing JSON files<a class="headerlink" href="#executing-json-files" title="Permanent link">&para;</a></h4>
+<p>When executing tests or tasks using the <code>robot</code> command, JSON files with
+the custom <code>.rbt</code> file extension are parsed automatically. This includes
+running individual JSON files such as <code>robot tests.rbt</code> and running directories
+containing <code>.rbt</code> files. If you would rather use the standard
+<code>.json</code> file extension, you need to <code>configure which files are parsed</code>.</p>
+<h4 id="adjusting-suite-source">Adjusting suite source<a class="headerlink" href="#adjusting-suite-source" title="Permanent link">&para;</a></h4>
+<p>Suite source in the data obtained from <code>TestSuite.to_json</code> and <code>TestSuite.to_dict</code> is in absolute format. If a suite is recreated later on a different machine, the source thus, may not match the directory structure on that machine. To avoid this situation, it is possible to use the <code>TestSuite.adjust_source</code> method to make the suite source relative before obtaining the data and to add a correct root directory after the suite is recreated:</p>
+<blockquote>
+<p><strong>TODO:</strong>  Explain absolute/relative here or link to it's definition online</p>
+</blockquote>
+<hr />
+<details>
+  <summary>&#129302; <b><i>EXAMPLE:</i></b></summary>
+
+   <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">from</span> <span class="nn">robot.running</span> <span class="kn">import</span> <span class="n">TestSuite</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="c1"># Create a suite, adjust source and convert to JSON.</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="n">suite</span> <span class="o">=</span> <span class="n">TestSuite</span><span class="o">.</span><span class="n">from_file_system</span><span class="p">(</span><span class="s1">&#39;/path/to/data&#39;</span><span class="p">)</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="n">suite</span><span class="o">.</span><span class="n">adjust_source</span><span class="p">(</span><span class="n">relative_to</span><span class="o">=</span><span class="s1">&#39;/path/to&#39;</span><span class="p">)</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="n">suite</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="s1">&#39;data.rbt&#39;</span><span class="p">)</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="c1"># Recreate suite elsewhere and adjust source accordingly.</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="n">suite</span> <span class="o">=</span> <span class="n">TestSuite</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="s1">&#39;data.rbt&#39;</span><span class="p">)</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="n">suite</span><span class="o">.</span><span class="n">adjust_source</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s1">&#39;/new/path/to&#39;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<p><br /></p>
+<p>For more information, please see:<br />
+- <a href="https://robot-framework.readthedocs.io/en/master/au_c/robot.model.html#robot.model.testsuite.TestSuite.adjust_source">https://robot-framework.readthedocs.io/en/master/au_c/robot.model.html#robot.model.testsuite.TestSuite.adjust_source</a></p>
+<h4 id="json-structure">JSON structure<a class="headerlink" href="#json-structure" title="Permanent link">&para;</a></h4>
+<p>Imports, variables and keywords created in suite files are included in the
+generated JSON along with tests and tasks. The exact JSON structure is documented at <code>running.json</code> <code>schema file</code>.</p>
+<h2 id="rules-for-parsing-the-data">Rules for parsing the data<a class="headerlink" href="#rules-for-parsing-the-data" title="Permanent link">&para;</a></h2>
+<h3 id="ignored-data">Ignored data<a class="headerlink" href="#ignored-data" title="Permanent link">&para;</a></h3>
+<p>When Robot Framework parses input data files, it ignores:</p>
+<ul>
+<li>All data before the first <code>test data or task data section</code>.</li>
+<li>Data in the <code>Comments</code> section.</li>
+<li>All empty rows.</li>
+<li>All empty cells at the end of rows when using the <code>pipe separated format</code>.</li>
+<li>All single backslashes (<code>\</code>) when not used for <code>escaping</code>.</li>
+<li>All characters following the hash character (<code>#</code>), when it is the first
+  character of a cell. This means that hash symbols can be used to enter
+  comments in the input data.</li>
+</ul>
+<p>When Robot Framework ignores some input data, this input data is not available in any resulting reports or logs and additionally, most tools used with Robot
+Framework also ignore them. To add information that is visible in
+Robot Framework outputs, place it to the documentation or other metadata of
+test cases, tasks or suites, or log it with the <code>BuiltIn</code> keywords <code>Log</code> or
+<code>Comment</code>.</p>
+<h3 id="escaping">Escaping<a class="headerlink" href="#escaping" title="Permanent link">&para;</a></h3>
+<p>The escape character in Robot Framework input data is the backslash
+(<code>\</code>) and additionally <code>built-in variables</code> <code>${EMPTY}</code> and <code>${SPACE}</code>
+can often be used for escaping also. Different escaping mechanisms are
+discussed in the sections below.</p>
+<h4 id="escaping-special-characters">Escaping special characters<a class="headerlink" href="#escaping-special-characters" title="Permanent link">&para;</a></h4>
+<p>The backslash character can be used to escape special characters so that their literal values are used.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Character</th>
+<th style="text-align: left;">Meaning</th>
+<th style="text-align: left;">Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>\$</code></td>
+<td style="text-align: left;">Dollar sign, never starts a <code>scalar variable</code>.</td>
+<td style="text-align: left;"><code>\${notvar}</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\@</code></td>
+<td style="text-align: left;">At sign, never starts a <code>list variable</code>_.</td>
+<td style="text-align: left;"><code>\@{notvar}</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\&amp;</code></td>
+<td style="text-align: left;">Ampersand, never starts a <code>dictionary variable</code>_.</td>
+<td style="text-align: left;"><code>\&amp;{notvar}</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\%</code></td>
+<td style="text-align: left;">Percent sign, never starts an <code>environment variable</code>_.</td>
+<td style="text-align: left;"><code>\%{notvar}</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\#</code></td>
+<td style="text-align: left;">Hash sign, never starts a comment_.</td>
+<td style="text-align: left;"><code>\# not comment</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\=</code></td>
+<td style="text-align: left;">Equal sign, never part of <code>named argument syntax</code>_.</td>
+<td style="text-align: left;"><code>not\=named</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\|</code></td>
+<td style="text-align: left;">Pipe character, not a separator in the <code>pipe separated format</code>.</td>
+<td style="text-align: left;"><code>ls -1 *.txt \| wc -l</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\</code></td>
+<td style="text-align: left;">Backslash character, never escapes anything.</td>
+<td style="text-align: left;"><code>c:\\temp, \\${var}</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="forming-escape-sequences">Forming escape sequences<a class="headerlink" href="#forming-escape-sequences" title="Permanent link">&para;</a></h4>
+<p>The backslash character also allows creating special escape sequences that are recognized as characters that would otherwise be difficult or impossible to create in the input data.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sequence</th>
+<th style="text-align: left;">Meaning</th>
+<th style="text-align: left;">Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>\n</code></td>
+<td style="text-align: left;">Newline character.</td>
+<td style="text-align: left;"><code>first line\n2nd line</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\r</code></td>
+<td style="text-align: left;">Carriage return character</td>
+<td style="text-align: left;"><code>text\rmore text</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\t</code></td>
+<td style="text-align: left;">Tab character.</td>
+<td style="text-align: left;"><code>text\tmore text</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\xhh</code></td>
+<td style="text-align: left;">Character with hex value <code>hh</code>.</td>
+<td style="text-align: left;"><code>null byte: \x00, ä: \xE4</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\uhhhh</code></td>
+<td style="text-align: left;">Character with hex value <code>hhhh</code>.</td>
+<td style="text-align: left;"><code>snowman: \u2603</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\Uhhhhhhhh</code></td>
+<td style="text-align: left;">Character with hex value <code>hhhhhhhh</code>.</td>
+<td style="text-align: left;"><code>love hotel: \U0001f3e9</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>&#128226; _<strong>NOTE:</strong> All strings created in the input data, including characters like <code>\x02</code>, are Unicode and must be explicitly converted to byte strings if needed. This can be done, for example, using <code>Convert To Bytes</code> or <code>Encode String To Bytes</code> keywords in <code>BuiltIn</code> and <code>String</code> libraries respectively, or with <code>value.encode('UTF-8')</code> or similar in Python code.</p>
+<p>&#128226; _<strong>NOTE:</strong> If invalid hexadecimal values are used with <code>\x</code>, <code>\u</code> or <code>\U</code> escape sequences, the end result is the original value without the backslash character. For example, <code>\xAX</code> (not hex) and <code>\U00110000</code> (too large value) result with <code>xAX</code> and <code>U00110000</code> respectively. This behavior may change in future versions of Robot Framework, however.</p>
+<p>&#128226; _<strong>NOTE:</strong> <code>Built-in variable</code> <code>${\n}</code> can be used if an operating system-dependent line terminator is needed (<code>\r\n</code> on Windows and <code>\n</code> elsewhere).</p>
+</blockquote>
+<h4 id="handling-empty-values">Handling empty values<a class="headerlink" href="#handling-empty-values" title="Permanent link">&para;</a></h4>
+<p>When using the <code>space separated format</code>, the number of spaces used as
+a separator can vary and thus empty values cannot be recognized unless they
+are escaped. Empty cells can be escaped either with the backslash character
+or with <code>built-in variable</code> <code>${EMPTY}</code>. The latter is typically recommended
+as it is easier to understand.</p>
+<hr />
+<details>
+  <summary>&#129302; <b><i>EXAMPLE:</i></b></summary>
+
+   <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span>
+<span class="normal"><a href="#__codelineno-9-7">7</a></span>
+<span class="normal"><a href="#__codelineno-9-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="o">***</span> <span class="n">Test</span> <span class="n">Cases</span> <span class="o">***</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">Using</span> <span class="n">backslash</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a>    <span class="n">Do</span> <span class="n">Something</span>    <span class="n">first</span> <span class="n">arg</span>    \
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a>    <span class="n">Do</span> <span class="n">Something</span>    \            <span class="n">second</span> <span class="n">arg</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5"></a>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="n">Using</span> <span class="err">$</span><span class="p">{</span><span class="n">EMPTY</span><span class="p">}</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7"></a>    <span class="n">Do</span> <span class="n">Something</span>    <span class="n">first</span> <span class="n">arg</span>    <span class="err">$</span><span class="p">{</span><span class="n">EMPTY</span><span class="p">}</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8"></a>    <span class="n">Do</span> <span class="n">Something</span>    <span class="err">$</span><span class="p">{</span><span class="n">EMPTY</span><span class="p">}</span>     <span class="n">second</span> <span class="n">arg</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<p><br /></p>
+<p>When using the <code>pipe separated format</code>, empty values need to be escaped
+only when they are at the end of the row:</p>
+<hr />
+<details>
+  <summary>&#129302; <b><i>EXAMPLE:</i></b></summary>
+
+   <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="o">|</span> <span class="o">***</span> <span class="n">Test</span> <span class="n">Cases</span> <span class="o">***</span> <span class="o">|</span>              <span class="o">|</span>           <span class="o">|</span>            <span class="o">|</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="o">|</span> <span class="n">Using</span> <span class="n">backslash</span>    <span class="o">|</span> <span class="n">Do</span> <span class="n">Something</span> <span class="o">|</span> <span class="n">first</span> <span class="n">arg</span> <span class="o">|</span> \          <span class="o">|</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="o">|</span>                    <span class="o">|</span> <span class="n">Do</span> <span class="n">Something</span> <span class="o">|</span>           <span class="o">|</span> <span class="n">second</span> <span class="n">arg</span> <span class="o">|</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="o">|</span>                    <span class="o">|</span>              <span class="o">|</span>           <span class="o">|</span>            <span class="o">|</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="o">|</span> <span class="n">Using</span> <span class="err">$</span><span class="p">{</span><span class="n">EMPTY</span><span class="p">}</span>     <span class="o">|</span> <span class="n">Do</span> <span class="n">Something</span> <span class="o">|</span> <span class="n">first</span> <span class="n">arg</span> <span class="o">|</span> <span class="err">$</span><span class="p">{</span><span class="n">EMPTY</span><span class="p">}</span>   <span class="o">|</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="o">|</span>                    <span class="o">|</span> <span class="n">Do</span> <span class="n">Something</span> <span class="o">|</span>           <span class="o">|</span> <span class="n">second</span> <span class="n">arg</span> <span class="o">|</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<p><br /></p>
+<h4 id="handling-spaces">Handling spaces<a class="headerlink" href="#handling-spaces" title="Permanent link">&para;</a></h4>
+<p>Spaces, especially consecutive spaces, as part of arguments for keywords or otherwise, are problematic for two reasons:</p>
+<ul>
+<li>Two or more consecutive spaces is considered a separator when using the
+  <code>space separated format</code>.</li>
+<li>Leading and trailing spaces are ignored when using the
+  <code>pipe separated format</code>.</li>
+</ul>
+<p>In these cases spaces need to be escaped. Similarly as when escaping empty
+values, it is possible to do this either by using the backslash character or
+by using the <code>built-in variable</code>_ <code>${SPACE}</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Escaping with backslash</th>
+<th style="text-align: left;">Escaping with <code>${SPACE}</code></th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>\\ leading space</code></td>
+<td style="text-align: left;"><code>${SPACE}leading space</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>trailing space \\</code></td>
+<td style="text-align: left;"><code>trailing space${SPACE}</code></td>
+<td style="text-align: left;">Backslash must be after the space.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\\ \\</code></td>
+<td style="text-align: left;"><code>${SPACE}</code></td>
+<td style="text-align: left;">Backslash needed on both sides.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>consecutive \\ \\ spaces</code></td>
+<td style="text-align: left;"><code>consecutive${SPACE * 3}spaces</code></td>
+<td style="text-align: left;">Using <code>extended variable syntax</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>As the above examples show, using the <code>${SPACE}</code> variable often makes the input data easier to understand. It is especially useful in combination with the <code>extended variable syntax</code> when more than one space is needed.</p>
+<h3 id="dividing-data-to-several-rows">Dividing data to several rows<a class="headerlink" href="#dividing-data-to-several-rows" title="Permanent link">&para;</a></h3>
+<p>If there is more data than readily fits a row, it is possible to split it 
+and start continuing rows with an ellipsis (<code>...</code>). Ellipses can be indented
+to match the indentation of the starting row and they must always be followed
+by the normal input data separator.</p>
+<p>In most places, split lines have exact same semantics as lines which are not
+split. Exceptions to this rule are <code>suite</code>, <code>test</code>, <code>task</code> and <code>keyword</code>  documentation
+as well as <code>suite metadata</code>. With these, split values are automatically
+<code>joined together with the newline character</code> to ease creating multiline values.</p>
+<p>The <code>...</code> syntax also allows splitting variables in the <code>Variable section</code>.
+When long scalar variables (i.e. <code>${STRING}</code>) are split to multiple rows,
+the final value is obtained by concatenating the rows together. The separator is
+a space by default, but that can be changed by starting the value with
+<code>SEPARATOR=&lt;sep&gt;</code>.</p>
+<blockquote>
+<p><strong>TODO:</strong>  Add an example here</p>
+</blockquote>
+<p>Splitting lines is illustrated in the following two examples containing
+exactly the same input data with and and without splitting.</p>
+<hr />
+<details>
+  <summary>&#129302; <b><i>EXAMPLE:</i></b></summary>
+
+   <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="o">***</span> <span class="n">Settings</span> <span class="o">***</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">Documentation</span>      <span class="n">Here</span> <span class="n">we</span> <span class="n">have</span> <span class="n">documentation</span> <span class="k">for</span> <span class="n">this</span> <span class="n">suite</span><span class="o">.</span>\<span class="n">nDocumentation</span> <span class="ow">is</span> <span class="n">often</span> <span class="n">quite</span> <span class="n">long</span><span class="o">.</span>\<span class="n">n</span>\<span class="n">nIt</span> <span class="n">can</span> <span class="n">also</span> <span class="n">contain</span> <span class="n">multiple</span> <span class="n">paragraphs</span><span class="o">.</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="n">Default</span> <span class="n">Tags</span>       <span class="n">default</span> <span class="n">tag</span> <span class="mi">1</span>    <span class="n">default</span> <span class="n">tag</span> <span class="mi">2</span>    <span class="n">default</span> <span class="n">tag</span> <span class="mi">3</span>    <span class="n">default</span> <span class="n">tag</span> <span class="mi">4</span>    <span class="n">default</span> <span class="n">tag</span> <span class="mi">5</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="o">***</span> <span class="n">Variables</span> <span class="o">***</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="err">$</span><span class="p">{</span><span class="n">STRING</span><span class="p">}</span>          <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">long</span> <span class="n">string</span><span class="o">.</span> <span class="n">It</span> <span class="n">has</span> <span class="n">multiple</span> <span class="n">sentences</span><span class="o">.</span> <span class="n">It</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">have</span> <span class="n">newlines</span><span class="o">.</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="err">$</span><span class="p">{</span><span class="n">MULTILINE</span><span class="p">}</span>       <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">long</span> <span class="n">multiline</span> <span class="n">string</span><span class="o">.</span>\<span class="n">nThis</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">second</span> <span class="n">line</span><span class="o">.</span>\<span class="n">nThis</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">third</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">last</span> <span class="n">line</span><span class="o">.</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="o">@</span><span class="p">{</span><span class="n">LIST</span><span class="p">}</span>            <span class="n">this</span>     <span class="nb">list</span>     <span class="ow">is</span>    <span class="n">quite</span>    <span class="n">long</span>     <span class="ow">and</span>    <span class="n">items</span> <span class="ow">in</span> <span class="n">it</span> <span class="n">can</span> <span class="n">also</span> <span class="n">be</span> <span class="n">long</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="o">&amp;</span><span class="p">{</span><span class="n">DICT</span><span class="p">}</span>            <span class="n">first</span><span class="o">=</span><span class="n">This</span> <span class="n">value</span> <span class="ow">is</span> <span class="n">pretty</span> <span class="n">long</span><span class="o">.</span>    <span class="n">second</span><span class="o">=</span><span class="n">This</span> <span class="n">value</span> <span class="ow">is</span> <span class="n">even</span> <span class="n">longer</span><span class="o">.</span> <span class="n">It</span> <span class="n">has</span> <span class="n">two</span> <span class="n">sentences</span><span class="o">.</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10"></a>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="o">***</span> <span class="n">Test</span> <span class="n">Cases</span> <span class="o">***</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="n">Example</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13"></a>    <span class="p">[</span><span class="n">Tags</span><span class="p">]</span>    <span class="n">you</span>    <span class="n">probably</span>    <span class="n">do</span>    <span class="ow">not</span>    <span class="n">have</span>    <span class="n">this</span>    <span class="n">many</span>    <span class="n">tags</span>    <span class="ow">in</span>    <span class="n">real</span>    <span class="n">life</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14"></a>    <span class="n">Do</span> <span class="n">X</span>    <span class="n">first</span> <span class="n">argument</span>    <span class="n">second</span> <span class="n">argument</span>    <span class="n">third</span> <span class="n">argument</span>    <span class="n">fourth</span> <span class="n">argument</span>    <span class="n">fifth</span> <span class="n">argument</span>    <span class="n">sixth</span> <span class="n">argument</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15"></a>    <span class="err">$</span><span class="p">{</span><span class="n">var</span><span class="p">}</span> <span class="o">=</span>    <span class="n">Get</span> <span class="n">X</span>    <span class="n">first</span> <span class="n">argument</span> <span class="n">passed</span> <span class="n">to</span> <span class="n">this</span> <span class="n">keyword</span> <span class="ow">is</span> <span class="n">pretty</span> <span class="n">long</span>    <span class="n">second</span> <span class="n">argument</span> <span class="n">passed</span> <span class="n">to</span> <span class="n">this</span> <span class="n">keyword</span> <span class="ow">is</span> <span class="n">long</span> <span class="n">too</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<p><br /></p>
+<hr />
+<details>
+  <summary>&#129302; <b><i>EXAMPLE:</i></b></summary>
+
+   <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span>
+<span class="normal"><a href="#__codelineno-12-16">16</a></span>
+<span class="normal"><a href="#__codelineno-12-17">17</a></span>
+<span class="normal"><a href="#__codelineno-12-18">18</a></span>
+<span class="normal"><a href="#__codelineno-12-19">19</a></span>
+<span class="normal"><a href="#__codelineno-12-20">20</a></span>
+<span class="normal"><a href="#__codelineno-12-21">21</a></span>
+<span class="normal"><a href="#__codelineno-12-22">22</a></span>
+<span class="normal"><a href="#__codelineno-12-23">23</a></span>
+<span class="normal"><a href="#__codelineno-12-24">24</a></span>
+<span class="normal"><a href="#__codelineno-12-25">25</a></span>
+<span class="normal"><a href="#__codelineno-12-26">26</a></span>
+<span class="normal"><a href="#__codelineno-12-27">27</a></span>
+<span class="normal"><a href="#__codelineno-12-28">28</a></span>
+<span class="normal"><a href="#__codelineno-12-29">29</a></span>
+<span class="normal"><a href="#__codelineno-12-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="o">***</span> <span class="n">Settings</span> <span class="o">***</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="n">Documentation</span>      <span class="n">Here</span> <span class="n">we</span> <span class="n">have</span> <span class="n">documentation</span> <span class="k">for</span> <span class="n">this</span> <span class="n">suite</span><span class="o">.</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="o">...</span>                <span class="n">Documentation</span> <span class="ow">is</span> <span class="n">often</span> <span class="n">quite</span> <span class="n">long</span><span class="o">.</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="o">...</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="o">...</span>                <span class="n">It</span> <span class="n">can</span> <span class="n">also</span> <span class="n">contain</span> <span class="n">multiple</span> <span class="n">paragraphs</span><span class="o">.</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="n">Default</span> <span class="n">Tags</span>       <span class="n">default</span> <span class="n">tag</span> <span class="mi">1</span>    <span class="n">default</span> <span class="n">tag</span> <span class="mi">2</span>    <span class="n">default</span> <span class="n">tag</span> <span class="mi">3</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="o">...</span>                <span class="n">default</span> <span class="n">tag</span> <span class="mi">4</span>    <span class="n">default</span> <span class="n">tag</span> <span class="mi">5</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8"></a>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="o">***</span> <span class="n">Variables</span> <span class="o">***</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="err">$</span><span class="p">{</span><span class="n">STRING</span><span class="p">}</span>          <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">long</span> <span class="n">string</span><span class="o">.</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="o">...</span>                <span class="n">It</span> <span class="n">has</span> <span class="n">multiple</span> <span class="n">sentences</span><span class="o">.</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="o">...</span>                <span class="n">It</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">have</span> <span class="n">newlines</span><span class="o">.</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="err">$</span><span class="p">{</span><span class="n">MULTILINE</span><span class="p">}</span>       <span class="n">SEPARATOR</span><span class="o">=</span>\<span class="n">n</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="o">...</span>                <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">long</span> <span class="n">multiline</span> <span class="n">string</span><span class="o">.</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="o">...</span>                <span class="n">This</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">second</span> <span class="n">line</span><span class="o">.</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="o">...</span>                <span class="n">This</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">third</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">last</span> <span class="n">line</span><span class="o">.</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="o">@</span><span class="p">{</span><span class="n">LIST</span><span class="p">}</span>            <span class="n">this</span>     <span class="nb">list</span>     <span class="ow">is</span>      <span class="n">quite</span>    <span class="n">long</span>     <span class="ow">and</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18"></a><span class="o">...</span>                <span class="n">items</span> <span class="ow">in</span> <span class="n">it</span> <span class="n">can</span> <span class="n">also</span> <span class="n">be</span> <span class="n">long</span>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19"></a><span class="o">&amp;</span><span class="p">{</span><span class="n">DICT</span><span class="p">}</span>            <span class="n">first</span><span class="o">=</span><span class="n">This</span> <span class="n">value</span> <span class="ow">is</span> <span class="n">pretty</span> <span class="n">long</span><span class="o">.</span>
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20"></a><span class="o">...</span>                <span class="n">second</span><span class="o">=</span><span class="n">This</span> <span class="n">value</span> <span class="ow">is</span> <span class="n">even</span> <span class="n">longer</span><span class="o">.</span> <span class="n">It</span> <span class="n">has</span> <span class="n">two</span> <span class="n">sentences</span><span class="o">.</span>
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21"></a>
+</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22"></a><span class="o">***</span> <span class="n">Test</span> <span class="n">Cases</span> <span class="o">***</span>
+</span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23"></a><span class="n">Example</span>
+</span><span id="__span-12-24"><a id="__codelineno-12-24" name="__codelineno-12-24"></a>    <span class="p">[</span><span class="n">Tags</span><span class="p">]</span>    <span class="n">you</span>    <span class="n">probably</span>    <span class="n">do</span>    <span class="ow">not</span>    <span class="n">have</span>    <span class="n">this</span>    <span class="n">many</span>
+</span><span id="__span-12-25"><a id="__codelineno-12-25" name="__codelineno-12-25"></a>    <span class="o">...</span>       <span class="n">tags</span>    <span class="ow">in</span>    <span class="n">real</span>    <span class="n">life</span>
+</span><span id="__span-12-26"><a id="__codelineno-12-26" name="__codelineno-12-26"></a>    <span class="n">Do</span> <span class="n">X</span>    <span class="n">first</span> <span class="n">argument</span>    <span class="n">second</span> <span class="n">argument</span>    <span class="n">third</span> <span class="n">argument</span>
+</span><span id="__span-12-27"><a id="__codelineno-12-27" name="__codelineno-12-27"></a>    <span class="o">...</span>    <span class="n">fourth</span> <span class="n">argument</span>    <span class="n">fifth</span> <span class="n">argument</span>    <span class="n">sixth</span> <span class="n">argument</span>
+</span><span id="__span-12-28"><a id="__codelineno-12-28" name="__codelineno-12-28"></a>    <span class="err">$</span><span class="p">{</span><span class="n">var</span><span class="p">}</span> <span class="o">=</span>    <span class="n">Get</span> <span class="n">X</span>
+</span><span id="__span-12-29"><a id="__codelineno-12-29" name="__codelineno-12-29"></a>    <span class="o">...</span>    <span class="n">first</span> <span class="n">argument</span> <span class="n">passed</span> <span class="n">to</span> <span class="n">this</span> <span class="n">keyword</span> <span class="ow">is</span> <span class="n">pretty</span> <span class="n">long</span>
+</span><span id="__span-12-30"><a id="__codelineno-12-30" name="__codelineno-12-30"></a>    <span class="o">...</span>    <span class="n">second</span> <span class="n">argument</span> <span class="n">passed</span> <span class="n">to</span> <span class="n">this</span> <span class="n">keyword</span> <span class="ow">is</span> <span class="n">long</span> <span class="n">too</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<p><br /></p>
+<h2 id="localization">Localization<a class="headerlink" href="#localization" title="Permanent link">&para;</a></h2>
+<p>Robot Framework localization efforts were started in Robot Framework 6.0
+and allow translation of <code>section headers</code>, <code>settings</code>,
+<code>Given/When/Then prefixes</code> used in Behavior Driven Development (BDD) and
+<code>true and false strings</code> used in automatic boolean argument conversion.
+The plan is to extend localization support in the future - for example,
+to log and report outputs and possibly also to control structures.</p>
+<p>This section explains how to <code>activate languages</code>, what <code>built-in languages</code>
+are supported, how to create <code>custom language files</code> and how new translations
+can be contributed.</p>
+<h3 id="enabling-languages">Enabling languages<a class="headerlink" href="#enabling-languages" title="Permanent link">&para;</a></h3>
+<h4 id="using-command-line-option">Using command line option<a class="headerlink" href="#using-command-line-option" title="Permanent link">&para;</a></h4>
+<p>The main mechanism to activate languages is specifying them from the command line
+using the <code>--language</code> option. When enabling <code>built-in languages</code>,
+it is possible to use either the language name, such as <code>Finnish</code>, or the language
+code, such as <code>fi</code>. Both names and codes are case and space insensitive and any hyphen (<code>-</code>) is ignored. To enable multiple languages, the <code>--language</code> option needs to be used multiple times:</p>
+<hr />
+<details>
+  <summary>&#129302; <b><i>EXAMPLE:</i></b></summary>
+
+   <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a> <span class="n">robot</span> <span class="o">--</span><span class="n">language</span> <span class="n">Finnish</span> <span class="n">testit</span><span class="o">.</span><span class="n">robot</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a> <span class="n">robot</span> <span class="o">--</span><span class="n">language</span> <span class="n">pt</span> <span class="o">--</span><span class="n">language</span> <span class="n">ptbr</span> <span class="n">testes</span><span class="o">.</span><span class="n">robot</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<p><br /></p>
+<blockquote>
+<p><strong>TODO:</strong>  Update examples throughout for clarity, remove abbreviations etc.</p>
+</blockquote>
+<p>The same <code>--language</code> option is used when activating <code>custom language files</code>. With them the value can be either a path to the file or, if the file is in the <code>module search path</code>, the module name:</p>
+<hr />
+<details>
+  <summary>&#129302; <b><i>EXAMPLE:</i></b></summary>
+
+   <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a> <span class="n">robot</span> <span class="o">--</span><span class="n">language</span> <span class="n">Custom</span><span class="o">.</span><span class="n">py</span> <span class="n">tests</span><span class="o">.</span><span class="n">robot</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a> <span class="n">robot</span> <span class="o">--</span><span class="n">language</span> <span class="n">MyLang</span> <span class="n">tests</span><span class="o">.</span><span class="n">robot</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<p><br /></p>
+<p>For backwards compatibility reasons, and to support partial translations,
+English is always activated automatically. Future versions may allow disabling
+it.</p>
+<h4 id="pre-file-configuration">Pre-file configuration<a class="headerlink" href="#pre-file-configuration" title="Permanent link">&para;</a></h4>
+<p>It is also possible to enable languages directly in data files by having
+a line <code>Language: &lt;value&gt;</code> (case-insensitive) before any of the section
+headers. The value after the colon is interpreted the same way as with
+the <code>--language</code> option:</p>
+<hr />
+<details>
+  <summary>&#129302; <b><i>EXAMPLE:</i></b></summary>
+
+   <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a> <span class="n">Language</span><span class="p">:</span> <span class="n">Finnish</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2"></a>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3"></a> <span class="o">***</span> <span class="n">Asetukset</span> <span class="o">***</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4"></a> <span class="n">Dokumentaatio</span>        <span class="n">Example</span> <span class="n">using</span> <span class="n">Finnish</span><span class="o">.</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<p><br /></p>
+<p>If there is a need to enable multiple languages, the <code>Language:</code> line
+can be repeated. These configuration lines cannot be in comments so code resembling 
+<code># Language: Finnish</code> or similar, has no effect.</p>
+<p>Due to technical limitations, the per-file language configuration also affects 
+parsing subsequent files as well as the whole execution. This behavior is likely to change in the future and <em>should not</em> be relied upon. If you use per-file configuration, use it with all files or enable languages globally with the <code>--language</code> option.</p>
+<blockquote>
+<p><strong>TODO:</strong>   Example needed above</p>
+</blockquote>
+<h3 id="built-in-languages">Built-in languages<a class="headerlink" href="#built-in-languages" title="Permanent link">&para;</a></h3>
+<p>The following languages are supported out-of-the-box. Click the language name
+to see further details of the actual translations:</p>
+<ul>
+<li><code>Bulgarian (bg)</code></li>
+<li><code>Bosnian (bs)</code></li>
+<li><code>Czech (cs)</code></li>
+<li><code>German (de)</code></li>
+<li><code>Spanish (es)</code></li>
+<li><code>Finnish (fi)</code></li>
+<li><code>French (fr)</code></li>
+<li><code>Hindi (hi)</code></li>
+<li><code>Italian (it)</code></li>
+<li><code>Dutch (nl)</code></li>
+<li><code>Polish (pl)</code></li>
+<li><code>Portuguese (pt)</code></li>
+<li><code>Brazilian Portuguese (pt-BR)</code></li>
+<li><code>Romanian (ro)</code></li>
+<li><code>Russian (ru)</code></li>
+<li><code>Swedish (sv)</code></li>
+<li><code>Thai (th)</code></li>
+<li><code>Turkish (tr)</code></li>
+<li><code>Ukrainian (uk)</code></li>
+<li><code>Vietnamese (vi)</code></li>
+<li><code>Chinese Simplified (zh-CN)</code></li>
+<li><code>Chinese Traditional (zh-TW)</code></li>
+</ul>
+<blockquote>
+<p><strong>TODO:</strong> Add hyperlinks to each language above</p>
+</blockquote>
+<p>All these translations have been provided by the fantastic Robot Framework
+community. If a language you are interested in is not included, you can
+consider<code>contributing</code> it!</p>
+<h3 id="custom-language-files">Custom language files<a class="headerlink" href="#custom-language-files" title="Permanent link">&para;</a></h3>
+<p>If a language you desire is not available as a built-in language, or you
+want to create a completely custom language for a specific need, you can easily
+create a custom language file. Language files are Python files which contain
+one or more language definitions that are all loaded when the language file
+is taken into use. Language definitions are created by extending the
+<code>robot.api.Language</code> base class and overriding class attributes as needed:</p>
+<hr />
+<details>
+  <summary>&#129302; <b><i>EXAMPLE:</i></b></summary>
+
+   <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span>
+<span class="normal"><a href="#__codelineno-16-5">5</a></span>
+<span class="normal"><a href="#__codelineno-16-6">6</a></span>
+<span class="normal"><a href="#__codelineno-16-7">7</a></span>
+<span class="normal"><a href="#__codelineno-16-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a> <span class="kn">from</span> <span class="nn">robot.api</span> <span class="kn">import</span> <span class="n">Language</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2"></a>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3"></a>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4"></a> <span class="k">class</span> <span class="nc">Example</span><span class="p">(</span><span class="n">Language</span><span class="p">):</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5"></a>     <span class="n">test_cases_header</span> <span class="o">=</span> <span class="s1">&#39;Validations&#39;</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6"></a>     <span class="n">tags_setting</span> <span class="o">=</span> <span class="s1">&#39;Labels&#39;</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7"></a>     <span class="n">given_prefixes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Assuming&#39;</span><span class="p">]</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8"></a>     <span class="n">true_strings</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;OK&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\N{THUMBS UP SIGN}</span><span class="s1">&#39;</span><span class="p">]</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<p><br /></p>
+<p>Assuming the above code would be in file <code>example.py</code>, a path to that
+file or just the module name <code>example</code> could be used when the language file
+is <code>activated</code>.</p>
+<p>The above example adds only some of the possible language translations, which is fine
+because English is automatically enabled anyway. Most values must be specified
+as strings, but BDD prefixes and true/false strings allow more than one value
+and must be given as lists. For more examples, see Robot Framework's internal
+<code>languages</code> module which contains the <code>Language</code> class as well as all built-in
+language definitions.
+- <a href="https://github.com/robotframework/robotframework/blob/master/src/robot/conf/languages.py">https://github.com/robotframework/robotframework/blob/master/src/robot/conf/languages.py</a></p>
+<h3 id="contributing-translations">Contributing translations<a class="headerlink" href="#contributing-translations" title="Permanent link">&para;</a></h3>
+<p>If you want to add translation for a new language or enhance an existing language, please head
+to <code>Crowdin</code> which we use for collaboration. For more details, see the separate <code>Localization</code> project and for questions and free discussion join the <code>#localization</code> channel on our <code>Slack</code> pletform.
+- <a href="https://robotframework.crowdin.com">https://robotframework.crowdin.com</a>
+- <a class="magiclink magiclink-github magiclink-repository" href="https://github.com/MarketSquare/localization" title="GitHub Repository: MarketSquare/localization">MarketSquare/localization</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Using
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../execution/" class="md-footer__link md-footer__link--next" aria-label="Next: Executing tests and tasks">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Executing tests and tasks
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024- <a href="https://robotframework.org/foundation" target="_blank" rel="noopener">Robot Framework Foundation</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/robotframework/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://slack.robotframework.org" target="_blank" rel="noopener" title="slack.robotframework.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1s21.16-47.06 47.06-47.06h47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06S448 171 448 196.9s-21.16 47.06-47.06 47.06h-47.06zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06S309 480 283.1 480s-47.06-21.16-47.06-47.06v-47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06s21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://forum.robotframework.org" target="_blank" rel="noopener" title="forum.robotframework.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M225.9 32C103.3 32 0 130.5 0 252.1 0 256 .1 480 .1 480l225.8-.2c122.7 0 222.1-102.3 222.1-223.9S348.6 32 225.9 32M224 384c-19.4 0-37.9-4.3-54.4-12.1L88.5 392l22.9-75c-9.8-18.1-15.4-38.9-15.4-61 0-70.7 57.3-128 128-128s128 57.3 128 128-57.3 128-128 128"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/company/robot-framework-foundation" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "navigation.tabs", "navigation.sections", "navigation.footer", "navigation.top", "navigation.indexes", "toc.integrate", "search.suggest", "search.highlight", "content.action.edit", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>
