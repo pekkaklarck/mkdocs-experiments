@@ -3,6 +3,10 @@
 {% block outdated %}
   You are not viewing documentation of the latest release.
   <a href="{{ '../' ~ base_url }}">
-    <strong>Click here to go to latest.</strong>
+    <strong>Click here to open it.</strong>
   </a>
+{% endblock %}
+
+{% block announce %}
+  📢 &nbsp; I'm an announcement! You can dismiss me and I return only if I'm changed.
 {% endblock %}

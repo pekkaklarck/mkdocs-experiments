@@ -7,6 +7,7 @@ copyright: |
   &copy; 2024- <a href="https://robotframework.org/foundation" target="_blank" rel="noopener">Robot Framework Foundation</a>
 watch:
   - src/robot/
+  - overrides
 
 nav:
   - Welcome: index.md
@@ -33,6 +34,7 @@ theme:
     repo: fontawesome/brands/github
   custom_dir: overrides
   features:
+    - announce.dismiss
     - navigation.tabs
     - navigation.sections
     - navigation.footer
