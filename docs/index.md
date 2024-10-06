@@ -6,6 +6,8 @@ Click the edit button on right to see the source code.
 
 Versioning ought to work now! :tada: :robot:
 
+This content was added in v0.2.2.
+
 ## Code snippets
 
 Here's a simple Robot Framework example to get us started! :rocket:
