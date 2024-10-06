@@ -6,7 +6,7 @@ Click the edit button on right to see the source code.
 
 Versioning ought to work now! :tada: :robot:
 
-This content was added in v0.2.2.
+This content was added in v0.2.2. This in v0.3a1.
 
 ## Code snippets
 
