@@ -134,7 +134,7 @@ Versioning has been set up using [mike](https://github.com/jimporter/mike) as
 [Material for Mkdocs documentation](https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/)
 recommends and automated using [GitHub Actions](https://docs.github.com/en/actions).
 
-## How it works
+### How it works
 
 This is how versioning works for users viewing the docs and for developers writing them:
 
@@ -154,7 +154,7 @@ This is how versioning works for users viewing the docs and for developers writi
 - It is possible to switch between versions using the widget in the page header.
 - Viewing any other documentation version than latest causes a warning to be shown.
 
-## Setting it up
+### Setting it up
 
 This is how versioning has been set up:
 
