@@ -127,3 +127,58 @@ and <library keyword:|library keywords> are alternatives.
 
     Collapsible admonitions can be initially expendad. They are provided by
     the [pymdownx.details](https://facelessuser.github.io/pymdown-extensions/extensions/details) plugin.
+
+## Versioning
+
+Versioning has been set up using [mike](https://github.com/jimporter/mike) as
+[Material for Mkdocs documentation](https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/)
+recommends and automated using [GitHub Actions](https://docs.github.com/en/actions).
+
+## How it works
+
+This is how versioning works for users viewing the docs and for developers writing them:
+
+- When a normal commit is pushed, documentation for the `dev` version is generated
+  automatically. New documentation overrides the existing `dev` docs.
+- When a new stable release tag in format like `v0.1` or `v2.0.1` is pushed,
+  documentation is generated for that release.
+- Release documentation versions use only two components like `2.0`. If new releases
+  in same series are created, they override existing documentation for that release.
+  For example, if there is first release `2.0` (generated from tag `v2.0`) and then
+  `2.0.1` is released (from tag `v2.0.1`), the shown `2.0` docs contain documentation
+  for version `2.0.1`.
+- Separate documentation is not generated for pre-releases like `2.1rc1`. It is
+  possible to view the `dev` docs instead.
+- `latest` version is an alias that always points to the docs of the latest release.
+- Opening the documentation root automatically redirects to `latest`.
+- It is possible to switch between versions using the widget in the page header.
+- Viewing any other documentation version than latest causes a warning to be shown.
+
+## Setting it up
+
+This is how versioning has been set up:
+
+- `mike` is listed in `requirements.txt`.
+- Possible old docs from `gh-pages` root should be removed or moved to a dedicated
+  directory. Running `mike delete --all --push` nukes everything, but you need to
+  make sure your local `gh-pages` branch is in sync with the origin (and that there
+  is nothing valuable that should not be removed).
+- `mkdocs.yml` configuration:
+  - Versioning is configured under `extra`.
+  - `mike` itself is configured under `plugins`.
+  - `site_url` should, for some reason, contain a trailing `/`.
+  - `theme/custom_dir` sets up the directory containing template for outdated version
+    warning. That directory is also listed under `watch`.
+- `overrides/main.html` contains the aforementioned outdated version warning.
+- `.github/workflows/dev-docs.yml` contains configuration for generating `dev` docs.
+- `.github/workflows/release-docs.yml` contains configuration for generating release docs.
+- The following commands needs to be run once to configure the default version.
+  > mike set-default --push --allow-undefined latest
+
+!!! warning
+
+    If workflows for generating `dev` and release docs are run at the same time, they
+    may conflict when they try to push changes to `gh-pages`. They should be configured
+    to wait for each others, but that didn't seem to be straightforward. Until that's
+    done, care must be taken not to push release tags until `dev` doc generation has
+    finished.
