@@ -1,12 +1,12 @@
 # Robot Framework Manual
 
-Click the edit button on right to see the source code.
+This site is a playground for testing [Material for Mkdocs](https://squidfunk.github.io/mkdocs-material/)
+features to be used with the [Robot Framework Manual](https://pekkaklarck.github.io/manual/latest/)
+that is going to replace the old [Robot Framework User Guide](https://robotframework.org/robotframework/#user-guide).
+To see the source code, click the edit button on right or go to the
+https://github.com/pekkaklarck/mkdocs-experiments repository.
 
-:blue_book: :open_book: :smile:
-
-Versioning ought to work now! :tada: :robot:
-
-This content was added in v0.2.2. This in v0.3a1.
+:robot: :blue_book: :open_book:
 
 ## Code snippets
 
