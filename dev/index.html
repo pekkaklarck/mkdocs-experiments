@@ -534,6 +534,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versioning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-it-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting it up
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1144,6 +1171,59 @@ and <a class="mkdocs-ezglossary-link"
 <p>Collapsible admonitions can be initially expendad. They are provided by
 the <a href="https://facelessuser.github.io/pymdown-extensions/extensions/details">pymdownx.details</a> plugin.</p>
 </details>
+<h2 id="versioning">Versioning<a class="headerlink" href="#versioning" title="Permanent link">&para;</a></h2>
+<p>Versioning has been set up using <a href="https://github.com/jimporter/mike">mike</a> as
+<a href="https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/">Material for Mkdocs documentation</a>
+recommends and automated using <a href="https://docs.github.com/en/actions">GitHub Actions</a>.</p>
+<h2 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
+<p>This is how versioning works for users viewing the docs and for developers writing them:</p>
+<ul>
+<li>When a normal commit is pushed, documentation for the <code>dev</code> version is generated
+  automatically. New documentation overrides the existing <code>dev</code> docs.</li>
+<li>When a new stable release tag in format like <code>v0.1</code> or <code>v2.0.1</code> is pushed,
+  documentation is generated for that release.</li>
+<li>Release documentation versions use only two components like <code>2.0</code>. If new releases
+  in same series are created, they override existing documentation for that release.
+  For example, if there is first release <code>2.0</code> (generated from tag <code>v2.0</code>) and then
+  <code>2.0.1</code> is released (from tag <code>v2.0.1</code>), the shown <code>2.0</code> docs contain documentation
+  for version <code>2.0.1</code>.</li>
+<li>Separate documentation is not generated for pre-releases like <code>2.1rc1</code>. It is
+  possible to view the <code>dev</code> docs instead.</li>
+<li><code>latest</code> version is an alias that always points to the docs of the latest release.</li>
+<li>Opening the documentation root automatically redirects to <code>latest</code>.</li>
+<li>It is possible to switch between versions using the widget in the page header.</li>
+<li>Viewing any other documentation version than latest causes a warning to be shown.</li>
+</ul>
+<h2 id="setting-it-up">Setting it up<a class="headerlink" href="#setting-it-up" title="Permanent link">&para;</a></h2>
+<p>This is how versioning has been set up:</p>
+<ul>
+<li><code>mike</code> is listed in <code>requirements.txt</code>.</li>
+<li>Possible old docs from <code>gh-pages</code> root should be removed or moved to a dedicated
+  directory. Running <code>mike delete --all --push</code> nukes everything, but you need to
+  make sure your local <code>gh-pages</code> branch is in sync with the origin (and that there
+  is nothing valuable that should not be removed).</li>
+<li><code>mkdocs.yml</code> configuration:</li>
+<li>Versioning is configured under <code>extra</code>.</li>
+<li><code>mike</code> itself is configured under <code>plugins</code>.</li>
+<li><code>site_url</code> should, for some reason, contain a trailing <code>/</code>.</li>
+<li><code>theme/custom_dir</code> sets up the directory containing template for outdated version
+    warning. That directory is also listed under <code>watch</code>.</li>
+<li><code>overrides/main.html</code> contains the aforementioned outdated version warning.</li>
+<li><code>.github/workflows/dev-docs.yml</code> contains configuration for generating <code>dev</code> docs.</li>
+<li><code>.github/workflows/release-docs.yml</code> contains configuration for generating release docs.</li>
+<li>The following commands needs to be run once to configure the default version.<blockquote>
+<p>mike set-default --push --allow-undefined latest</p>
+</blockquote>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If workflows for generating <code>dev</code> and release docs are run at the same time, they
+may conflict when they try to push changes to <code>gh-pages</code>. They should be configured
+to wait for each others, but that didn't seem to be straightforward. Until that's
+done, care must be taken not to push release tags until <code>dev</code> doc generation has
+finished.</p>
+</div>
 
 
 
