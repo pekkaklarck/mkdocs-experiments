@@ -1,3 +1,7 @@
+---
+title: Robot Framework Manual   # Used by social preview. On other pages the default is fine.
+---
+
 # Robot Framework Manual
 
 This site is a playground for testing [Material for Mkdocs](https://squidfunk.github.io/mkdocs-material/)
