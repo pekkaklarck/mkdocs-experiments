@@ -174,6 +174,10 @@ This is how versioning has been set up:
 - `.github/workflows/release-docs.yml` contains configuration for generating release docs.
 - The following commands needs to be run once to configure the default version.
   > mike set-default --push --allow-undefined latest
+- To get social cards working when someone refers to the documentation root, copy
+  related `og:xxx` (and `twitter:xxx`) meta tags from `latest/index.html` to
+  `/index.html`. See this project's [index.html](https://github.com/pekkaklarck/mkdocs-experiments/blob/gh-pages/index.html)
+  for an example.
 
 !!! warning
 
