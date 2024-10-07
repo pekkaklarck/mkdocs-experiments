@@ -541,9 +541,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Versioning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
       How it works
@@ -551,13 +552,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#setting-it-up" class="md-nav__link">
     <span class="md-ellipsis">
       Setting it up
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1175,7 +1181,7 @@ the <a href="https://facelessuser.github.io/pymdown-extensions/extensions/detail
 <p>Versioning has been set up using <a href="https://github.com/jimporter/mike">mike</a> as
 <a href="https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/">Material for Mkdocs documentation</a>
 recommends and automated using <a href="https://docs.github.com/en/actions">GitHub Actions</a>.</p>
-<h2 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
+<h3 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
 <p>This is how versioning works for users viewing the docs and for developers writing them:</p>
 <ul>
 <li>When a normal commit is pushed, documentation for the <code>dev</code> version is generated
@@ -1194,7 +1200,7 @@ recommends and automated using <a href="https://docs.github.com/en/actions">GitH
 <li>It is possible to switch between versions using the widget in the page header.</li>
 <li>Viewing any other documentation version than latest causes a warning to be shown.</li>
 </ul>
-<h2 id="setting-it-up">Setting it up<a class="headerlink" href="#setting-it-up" title="Permanent link">&para;</a></h2>
+<h3 id="setting-it-up">Setting it up<a class="headerlink" href="#setting-it-up" title="Permanent link">&para;</a></h3>
 <p>This is how versioning has been set up:</p>
 <ul>
 <li><code>mike</code> is listed in <code>requirements.txt</code>.</li>
