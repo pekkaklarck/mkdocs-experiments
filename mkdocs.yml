@@ -105,7 +105,7 @@ plugins:
       inline_refs: short
 
 hooks:
-  - hooks/fix_social_share_title.py
+  - hooks/set_homepage_share_title.py
 
 extra:
   social:
