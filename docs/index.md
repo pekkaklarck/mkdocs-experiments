@@ -6,7 +6,20 @@ that is going to replace the old [Robot Framework User Guide](https://robotframe
 To see the source code, click the edit button on right or go to the
 https://github.com/pekkaklarck/mkdocs-experiments repository.
 
-:robot: :blue_book: :open_book:
+## Emojis and icons
+
+Lot of emojis and icons are [supported](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/):
+
+- Emojis: :robot: :blue_book: :open_book:
+- [Material Design](https://materialdesignicons.com/): :material-atv: :material-bug:
+- [FontAwesome](https://fontawesome.com/search?m=free): :fontawesome-solid-handshake: :fontawesome-brands-github-alt:
+- [Octicons](https://octicons.github.com/): :octicons-bug-16: :octicons-key-16:
+- [Simple Icons](https://simpleicons.org/): :simple-git: :simple-robotframework:
+- Custom icons: :robot-logo:
+
+Being able to add custom icons is handy, but because Simple Icons
+already has :simple-robotframework:, having also custom :robot-logo:
+may not be useful.
 
 ## Code snippets
 
