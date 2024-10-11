@@ -71,10 +71,9 @@ anchor.
 
 ## Glossary
 
-<Keyword:> is a term in our [glossary](glossary.md). The term lookup is case-insensitive,
-so we can refer to terms also like <library keyword:>. Plural formats should work
-as well, but that feature seems to be
-[buggy](https://github.com/realtimeprojects/mkdocs-ezglossary/issues/22).
+<Keyword:> is a term in our [glossary](glossary.md). Term lookup is
+case-insensitive and takes plural forms into account, so we can
+refer to a term specified as `Library keyword` like <library keywords:>.
 
 Glossary functionality is provided by the
 [mkdocs-ezglossary](https://github.com/realtimeprojects/mkdocs-ezglossary) plugin.
