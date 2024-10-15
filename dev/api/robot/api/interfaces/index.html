@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../../styles/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -1907,6 +1907,11 @@ __ <a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGu
 
 
 
+
+
+
+
+
   <div class="doc doc-children">
 
 
@@ -1929,7 +1934,7 @@ __ <a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGu
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-external" title="abc.ABC" href="https://docs.python.org/3/library/abc.html#abc.ABC">ABC</a></code></p>
+              Bases: <code>ABC</code></p>
 
 
         <p>Optional base class for libraries using the dynamic library API.</p>
@@ -1938,6 +1943,11 @@ what keywords a library implements and run them by using
 :meth:<code>get_keyword_names</code> and :meth:<code>run_keyword</code> methods, respectively.
 In addition to that it has various optional methods for returning more
 information about the implemented keywords to Robot Framework.</p>
+
+
+
+
+
 
               <details class="quote">
                 <summary>Source code in <code>src/robot/api/interfaces.py</code></summary>
@@ -2835,11 +2845,16 @@ way as with the normal static library API.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="robot.api.interfaces.StartKeywordAttributes" href="#robot.api.interfaces.StartKeywordAttributes">StartKeywordAttributes</a></code></p>
+              Bases: <code>StartKeywordAttributes</code></p>
 
 
         <p>Attributes passed to listener v2 <code>end_keyword</code> method.</p>
 <p>See the User Guide for more information.</p>
+
+
+
+
+
 
               <details class="quote">
                 <summary>Source code in <code>src/robot/api/interfaces.py</code></summary>
@@ -2892,11 +2907,16 @@ way as with the normal static library API.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="robot.api.interfaces.StartSuiteAttributes" href="#robot.api.interfaces.StartSuiteAttributes">StartSuiteAttributes</a></code></p>
+              Bases: <code>StartSuiteAttributes</code></p>
 
 
         <p>Attributes passed to listener v2 <code>end_suite</code> method.</p>
 <p>See the User Guide for more information.</p>
+
+
+
+
+
 
               <details class="quote">
                 <summary>Source code in <code>src/robot/api/interfaces.py</code></summary>
@@ -2955,11 +2975,16 @@ way as with the normal static library API.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="robot.api.interfaces.StartTestAttributes" href="#robot.api.interfaces.StartTestAttributes">StartTestAttributes</a></code></p>
+              Bases: <code>StartTestAttributes</code></p>
 
 
         <p>Attributes passed to listener v2 <code>end_test</code> method.</p>
 <p>See the User Guide for more information.</p>
+
+
+
+
+
 
               <details class="quote">
                 <summary>Source code in <code>src/robot/api/interfaces.py</code></summary>
@@ -3016,7 +3041,7 @@ way as with the normal static library API.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-external" title="abc.ABC" href="https://docs.python.org/3/library/abc.html#abc.ABC">ABC</a></code></p>
+              Bases: <code>ABC</code></p>
 
 
         <p>Optional base class for libraries using the hybrid library API.</p>
@@ -3029,6 +3054,11 @@ from the keyword method.</p>
 <p>It is possible to implement keywords also outside the main library class.
 In such cases the library needs to have a <code>__getattr__</code> method that
 returns desired keyword methods.</p>
+
+
+
+
+
 
               <details class="quote">
                 <summary>Source code in <code>src/robot/api/interfaces.py</code></summary>
@@ -3150,11 +3180,16 @@ returns desired keyword methods.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-external" title="typing.TypedDict" href="https://docs.python.org/3/library/typing.html#typing.TypedDict">TypedDict</a></code></p>
+              Bases: <code>TypedDict</code></p>
 
 
         <p>Attributes passed to listener v2 <code>library_import</code> method.</p>
 <p>See the User Guide for more information.</p>
+
+
+
+
+
 
               <details class="quote">
                 <summary>Source code in <code>src/robot/api/interfaces.py</code></summary>
@@ -3213,6 +3248,11 @@ returns desired keyword methods.</p>
 
 
         <p>Optional base class for listeners using the listener API version 2.</p>
+
+
+
+
+
 
               <details class="quote">
                 <summary>Source code in <code>src/robot/api/interfaces.py</code></summary>
@@ -3949,6 +3989,11 @@ Only called if creating the xunit file is enabled.</p>
 
 
         <p>Optional base class for listeners using the listener API version 3.</p>
+
+
+
+
+
 
               <details class="quote">
                 <summary>Source code in <code>src/robot/api/interfaces.py</code></summary>
@@ -6831,11 +6876,16 @@ Only called if creating the xunit file is enabled.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-external" title="typing.TypedDict" href="https://docs.python.org/3/library/typing.html#typing.TypedDict">TypedDict</a></code></p>
+              Bases: <code>TypedDict</code></p>
 
 
         <p>Attributes passed to listener v2 <code>log_message</code> and <code>messages</code> methods.</p>
 <p>See the User Guide for more information.</p>
+
+
+
+
+
 
               <details class="quote">
                 <summary>Source code in <code>src/robot/api/interfaces.py</code></summary>
@@ -6892,12 +6942,17 @@ Only called if creating the xunit file is enabled.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-external" title="typing.TypedDict" href="https://docs.python.org/3/library/typing.html#typing.TypedDict">TypedDict</a></code></p>
+              Bases: <code>TypedDict</code></p>
 
 
         <p>Extra attributes passed to listener v2 <code>start/end_keyword</code> methods.</p>
 <p>These attributes are included with control structures. For example, with
 IF structures attributes include <code>condition</code>.</p>
+
+
+
+
+
 
               <details class="quote">
                 <summary>Source code in <code>src/robot/api/interfaces.py</code></summary>
@@ -6972,7 +7027,7 @@ IF structures attributes include <code>condition</code>.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-external" title="abc.ABC" href="https://docs.python.org/3/library/abc.html#abc.ABC">ABC</a></code></p>
+              Bases: <code>ABC</code></p>
 
 
         <p>Optional base class for custom parsers.</p>
@@ -7012,6 +7067,11 @@ when a parser is implemented as a module.</p>
         <span class="k">return</span> <span class="n">suite</span>
 </code></pre></div></td></tr></table></div>
 <p>The support for custom parsers is new in Robot Framework 6.1.</p>
+
+
+
+
+
 
               <details class="quote">
                 <summary>Source code in <code>src/robot/api/interfaces.py</code></summary>
@@ -7270,11 +7330,16 @@ an error.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-external" title="typing.TypedDict" href="https://docs.python.org/3/library/typing.html#typing.TypedDict">TypedDict</a></code></p>
+              Bases: <code>TypedDict</code></p>
 
 
         <p>Attributes passed to listener v2 <code>resource_import</code> method.</p>
 <p>See the User Guide for more information.</p>
+
+
+
+
+
 
               <details class="quote">
                 <summary>Source code in <code>src/robot/api/interfaces.py</code></summary>
@@ -7327,11 +7392,16 @@ an error.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="robot.api.interfaces.OptionalKeywordAttributes" href="#robot.api.interfaces.OptionalKeywordAttributes">OptionalKeywordAttributes</a></code></p>
+              Bases: <code>OptionalKeywordAttributes</code></p>
 
 
         <p>Attributes passed to listener v2 <code>start_keyword</code> method.</p>
 <p>See the User Guide for more information.</p>
+
+
+
+
+
 
               <details class="quote">
                 <summary>Source code in <code>src/robot/api/interfaces.py</code></summary>
@@ -7402,11 +7472,16 @@ an error.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-external" title="typing.TypedDict" href="https://docs.python.org/3/library/typing.html#typing.TypedDict">TypedDict</a></code></p>
+              Bases: <code>TypedDict</code></p>
 
 
         <p>Attributes passed to listener v2 <code>start_suite</code> method.</p>
 <p>See the User Guide for more information.</p>
+
+
+
+
+
 
               <details class="quote">
                 <summary>Source code in <code>src/robot/api/interfaces.py</code></summary>
@@ -7473,11 +7548,16 @@ an error.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-external" title="typing.TypedDict" href="https://docs.python.org/3/library/typing.html#typing.TypedDict">TypedDict</a></code></p>
+              Bases: <code>TypedDict</code></p>
 
 
         <p>Attributes passed to listener v2 <code>start_test</code> method.</p>
 <p>See the User Guide for more information.</p>
+
+
+
+
+
 
               <details class="quote">
                 <summary>Source code in <code>src/robot/api/interfaces.py</code></summary>
@@ -7544,11 +7624,16 @@ an error.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-external" title="typing.TypedDict" href="https://docs.python.org/3/library/typing.html#typing.TypedDict">TypedDict</a></code></p>
+              Bases: <code>TypedDict</code></p>
 
 
         <p>Attributes passed to listener v2 <code>variables_import</code> method.</p>
 <p>See the User Guide for more information.</p>
+
+
+
+
+
 
               <details class="quote">
                 <summary>Source code in <code>src/robot/api/interfaces.py</code></summary>
@@ -7751,7 +7836,7 @@ an error.</p>
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["announce.dismiss", "navigation.tabs", "navigation.sections", "navigation.footer", "navigation.top", "navigation.indexes", "toc.integrate", "search.suggest", "search.highlight", "content.action.edit", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>
