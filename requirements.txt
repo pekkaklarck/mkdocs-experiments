@@ -6,3 +6,4 @@ mkdocs-section-index
 mkdocs-exclude
 mkdocs-ezglossary-plugin
 mike
+black    # For formatting signatures with mkdocstrings.
