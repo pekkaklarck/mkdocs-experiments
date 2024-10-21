@@ -10,15 +10,29 @@ https://github.com/pekkaklarck/mkdocs-experiments repository.
 
 Use the toggle in the header to choose the mode and the following two chapters are
 changed based on that. The first chapter uses `{test}` markup that's rendered like
-`test` or `task` based  on the toggle. The latter chapter is replaced altogether.
+`test` or `task` based  on the mode. The second chapter and the associated example
+are replaced altogether.
 
-Should we use term {test}? **{Test}s** we'll use!
+Should we use {test}? **{Test}s** we shall use!
 
-This is a paragraph only relevant when doing test automation. :fontawesome-solid-bug:
+This paragraph is relevant only when doing test automation.
+We love bugs! :fontawesome-solid-bug:
 {: .test}
 
-This is a paragraph only for RPA users. :fontawesome-solid-gear:
+```robotframework {: .test}
+*** Test Cases ***
+Example
+    Log    Hello, testers!
+```
+
+This is a paragraph only for the RPA users. We love processes! :fontawesome-solid-gear:
 {: .task}
+
+```robotframework {: .task}
+*** Tasks ***
+Example
+    Log    Hello, process automators!
+```
 
 Everyone needs this paragraph.
 
