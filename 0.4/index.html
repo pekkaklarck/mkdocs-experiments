@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="styles/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -178,7 +178,14 @@
     </div>
     
       
-        <form class="md-header__option" data-md-component="palette">
+        <form id="rpa-toggle">
+  <span>Testing</span>
+  <label>
+    <input type="checkbox" onclick="toggleTestOrTask(this.checked);">
+    <span id="rpa-slider" title="Switch between test automation and process automation modes"></span>
+  </label>
+  <span>RPA</span>
+</form><form class="md-header__option" data-md-component="palette">
   
     
     
@@ -488,6 +495,15 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#test-or-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test or task?
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#emojis-and-icons" class="md-nav__link">
@@ -1092,6 +1108,9 @@ features to be used with the <a href="https://pekkaklarck.github.io/manual/lates
 that is going to replace the old <a href="https://robotframework.org/robotframework/#user-guide">Robot Framework User Guide</a>.
 To see the source code, click the edit button on right or go to the
 <a class="magiclink magiclink-github magiclink-repository" href="https://github.com/pekkaklarck/mkdocs-experiments" title="GitHub Repository: pekkaklarck/mkdocs-experiments">pekkaklarck/mkdocs-experiments</a> repository.</p>
+<h2 id="test-or-task">Test or task?<a class="headerlink" href="#test-or-task" title="Permanent link">&para;</a></h2>
+<p>Use the toggle in the header to choose. The next chapter changes based on that.</p>
+<p>Should we use <span class="robot-test">test</span><span class="robot-task">task</span>? <strong><span class="robot-test">Test</span><span class="robot-task">Task</span>s</strong> we'll use!</p>
 <h2 id="emojis-and-icons">Emojis and icons<a class="headerlink" href="#emojis-and-icons" title="Permanent link">&para;</a></h2>
 <p>Lot of emojis and icons are <a href="https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/">supported</a>:</p>
 <ul>
@@ -1465,6 +1484,8 @@ finished.</p>
     
     
       <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="styles/extra.js"></script>
       
     
   </body>
