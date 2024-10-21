@@ -26,6 +26,9 @@ nav:
 extra_css:
   - styles/extra.css
 
+extra_javascript:
+  - styles/extra.js
+
 theme:
   name: material
   logo: styles/logo-white.png
@@ -162,3 +165,4 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - test_or_task

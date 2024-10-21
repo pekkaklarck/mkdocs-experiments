@@ -1,0 +1,29 @@
+{#-
+  Toggle for switching between test automation and process automation modes.
+-#}
+<form id="rpa-toggle">
+  <span>Testing</span>
+  <label>
+    <input type="checkbox" onclick="toggleTestOrTask(this.checked);">
+    <span id="rpa-slider" title="Switch between test automation and process automation modes"></span>
+  </label>
+  <span>RPA</span>
+</form>
+
+{#-
+  Dark/light mode switch. Copied directly from the original palette.html.
+  Would be better to extend it, but that doesn't seem to be possible.
+-#}
+<form class="md-header__option" data-md-component="palette">
+  {% for option in config.theme.palette %}
+    {% set scheme  = option.scheme  | d("default", true) %}
+    {% set primary = option.primary | d("indigo", true) %}
+    {% set accent  = option.accent  | d("indigo", true) %}
+    <input class="md-option" data-md-color-media="{{ option.media }}" data-md-color-scheme="{{ scheme | replace(' ', '-') }}" data-md-color-primary="{{ primary | replace(' ', '-') }}" data-md-color-accent="{{ accent | replace(' ', '-') }}" {% if option.toggle %} aria-label="{{ option.toggle.name }}" {% else %} aria-hidden="true" {% endif %} type="radio" name="__palette" id="__palette_{{ loop.index0 }}">
+    {% if option.toggle %}
+      <label class="md-header__button md-icon" title="{{ option.toggle.name }}" for="__palette_{{ loop.index % loop.length }}" hidden>
+        {% include ".icons/" ~ option.toggle.icon ~ ".svg" %}
+      </label>
+    {% endif %}
+  {% endfor %}
+</form>

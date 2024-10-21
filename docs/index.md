@@ -21,6 +21,12 @@ Being able to add custom icons is handy, but because Simple Icons
 already has :simple-robotframework:, having also custom :robot-logo:
 may not be useful.
 
+## Test or task?
+
+Use the toggle in the header to choose. The next chapter changes based on that.
+
+Should we use {test}? **{Test}s** we'll use!
+
 ## Code snippets
 
 Here's a simple Robot Framework example to get us started! :rocket:
