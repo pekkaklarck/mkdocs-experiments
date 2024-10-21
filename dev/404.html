@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="/mkdocs-experiments/latest/styles/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -143,7 +143,14 @@
     </div>
     
       
-        <form class="md-header__option" data-md-component="palette">
+        <form id="rpa-toggle">
+  <span>Testing</span>
+  <label>
+    <input type="checkbox" onclick="toggleTestOrTask(this.checked);">
+    <span id="rpa-slider" title="Switch between test automation and process automation modes"></span>
+  </label>
+  <span>RPA</span>
+</form><form class="md-header__option" data-md-component="palette">
   
     
     
@@ -1013,6 +1020,8 @@
     
     
       <script src="/mkdocs-experiments/latest/assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="/mkdocs-experiments/latest/styles/extra.js"></script>
       
     
   </body>
