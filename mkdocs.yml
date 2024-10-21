@@ -117,6 +117,7 @@ plugins:
 
 hooks:
   - hooks/set_homepage_share_title.py
+  - hooks/test_or_task.py
 
 extra:
   social:
@@ -165,4 +166,3 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
-  - test_or_task
