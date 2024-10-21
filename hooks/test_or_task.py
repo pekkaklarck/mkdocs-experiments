@@ -17,7 +17,7 @@ import re
 
 
 def on_page_markdown(markdown, page, config, files):
-    return re.sub(r'(?i)\{(test)}', test_and_task, markdown)
+    return re.sub(r'(?i)(?<!`)\{(test)}', test_and_task, markdown)
 
 
 def test_and_task(match: re.Match) -> str:
