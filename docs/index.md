@@ -8,9 +8,19 @@ https://github.com/pekkaklarck/mkdocs-experiments repository.
 
 ## Test or task?
 
-Use the toggle in the header to choose. The next chapter changes based on that.
+Use the toggle in the header to choose the mode and the following two chapters are
+changed based on that. The first chapter uses `{test}` markup that's rendered like
+`test` or `task` based  on the toggle. The latter chapter is replaced altogether.
 
-Should we use {test}? **{Test}s** we'll use!
+Should we use term {test}? **{Test}s** we'll use!
+
+This is a paragraph only relevant when doing test automation. :fontawesome-solid-bug:
+{: .robot-test}
+
+This is a paragraph only for RPA users. :fontawesome-solid-gear:
+{: .robot-task}
+
+Everyone needs this paragraph.
 
 ## Emojis and icons
 
