@@ -15,9 +15,6 @@
 .task {
     display: none;
 }
-#rpa-toggle {
-    margin-right: 0.5rem;
-}
 #rpa-toggle label {
     position: relative;
     display: inline-block;
@@ -56,6 +53,7 @@
 }
 #rpa-toggle > span {
     font-size: 0.7rem;
-    margin: 0.3rem;
+    padding: 0.2rem;
     vertical-align: -7px;
+    cursor: pointer;
 }
