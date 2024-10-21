@@ -15,10 +15,10 @@ changed based on that. The first chapter uses `{test}` markup that's rendered li
 Should we use term {test}? **{Test}s** we'll use!
 
 This is a paragraph only relevant when doing test automation. :fontawesome-solid-bug:
-{: .robot-test}
+{: .test}
 
 This is a paragraph only for RPA users. :fontawesome-solid-gear:
-{: .robot-task}
+{: .task}
 
 Everyone needs this paragraph.
 

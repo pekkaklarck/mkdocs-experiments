@@ -1,6 +1,6 @@
 function toggleTestOrTask(checked) {
-    const tests = document.getElementsByClassName('robot-test');
-    const tasks = document.getElementsByClassName('robot-task');
+    const tests = document.getElementsByClassName('test');
+    const tasks = document.getElementsByClassName('task');
     if (checked) {
         setDisplay(tests, 'none');
         setDisplay(tasks, 'inline');
