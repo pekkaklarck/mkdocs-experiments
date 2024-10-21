@@ -9,14 +9,11 @@
 
 # Test/task toggle. Toggle styles are based on
 # https://www.w3schools.com/howto/howto_css_switch.asp
-.robot-test {
+.test {
     display: inline;
 }
-.robot-task {
+.task {
     display: none;
-}
-#rpa-toggle {
-    margin-right: 0.5rem;
 }
 #rpa-toggle label {
     position: relative;
@@ -56,6 +53,7 @@
 }
 #rpa-toggle > span {
     font-size: 0.7rem;
-    margin: 0.3rem;
+    padding: 0.2rem;
     vertical-align: -7px;
+    cursor: pointer;
 }
