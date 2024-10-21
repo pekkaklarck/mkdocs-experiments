@@ -6,6 +6,12 @@ that is going to replace the old [Robot Framework User Guide](https://robotframe
 To see the source code, click the edit button on right or go to the
 https://github.com/pekkaklarck/mkdocs-experiments repository.
 
+## Test or task?
+
+Use the toggle in the header to choose. The next chapter changes based on that.
+
+Should we use {test}? **{Test}s** we'll use!
+
 ## Emojis and icons
 
 Lot of emojis and icons are [supported](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/):
@@ -20,12 +26,6 @@ Lot of emojis and icons are [supported](https://squidfunk.github.io/mkdocs-mater
 Being able to add custom icons is handy, but because Simple Icons
 already has :simple-robotframework:, having also custom :robot-logo:
 may not be useful.
-
-## Test or task?
-
-Use the toggle in the header to choose. The next chapter changes based on that.
-
-Should we use {test}? **{Test}s** we'll use!
 
 ## Code snippets
 
