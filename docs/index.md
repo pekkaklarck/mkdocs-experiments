@@ -21,7 +21,7 @@ We love bugs! :fontawesome-solid-bug:
 
 ```robotframework {: .test}
 *** Test Cases ***
-Example
+Testing example
     Log    Hello, testers!
 ```
 
@@ -30,11 +30,19 @@ This is a paragraph only for the RPA users. We love processes! :fontawesome-soli
 
 ```robotframework {: .task}
 *** Tasks ***
-Example
+RPA example
     Log    Hello, process automators!
 ```
 
-Everyone needs this paragraph.
+Everyone needs this paragraph and the following example, but the example is adapted
+based on the mode.
+
+```robotframework
+*** Test Cases ***
+Example for all
+    [Documentation]    Only the header changes!
+    Log    Hello, world!
+```
 
 ## Emojis and icons
 
