@@ -2,12 +2,18 @@
   Toggle for switching between test automation and process automation modes.
 -#}
 <form id="rpa-toggle">
-  <span onclick="toggleTestOrTask(false);">Testing</span>
-  <label>
-    <input type="checkbox" onclick="toggleTestOrTask(this.checked);">
-    <span id="rpa-slider" title="Switch between test automation and process automation modes"></span>
-  </label>
-  <span onclick="toggleTestOrTask(true);">RPA</span>
+  <div onclick="toggleTestOrTask(false);"
+       title="Set test automation mode"
+       class="md-header__button md-icon">{% include ".icons/fontawesome/solid/bug.svg" %}</div>
+  <div>
+    <label>
+      <input type="checkbox" onclick="toggleTestOrTask(this.checked);">
+      <span id="rpa-slider" title="Toggle between test automation and process automation modes"></span>
+    </label>
+  </div>
+  <div onclick="toggleTestOrTask(true);"
+       title="Set process automation mode"
+       class="md-header__button md-icon">{% include ".icons/fontawesome/solid/gear.svg" %}</div>
 </form>
 
 {#-
