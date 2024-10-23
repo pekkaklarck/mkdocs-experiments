@@ -91,14 +91,8 @@
 // Modify styles directly to show tests/tasks correctly when they are loaded.
 function setTaskMode() {
     const sheet = document.querySelector('link[href*="extra.css"]').sheet;
-    for (const rule of sheet.cssRules) {
-        if (rule.selectorText == '.test') {
-            rule.styleMap.set('display', 'none');
-        }
-        if (rule.selectorText == '.task') {
-            rule.styleMap.set('display', 'inline');
-        }
-    }
+    sheet.insertRule('.test { display: none; }', sheet.cssRules.length);
+    sheet.insertRule('.task { display: inline; }', sheet.cssRules.length);
 }
 if (localStorage.getItem('robot-framework-manual-mode') == 'task') {
     setTaskMode();
@@ -1008,7 +1002,7 @@ if (localStorage.getItem('robot-framework-manual-mode') == 'task') {
     title="Keywords are very important for us."
     name="_:Keyword"
     href="../glossary/#c45c429a0f7336c4fdeda3e7eee2c5e8">keyword</a>
-term here. We are be talking about <strong><span class="test">test</span><span class="task">task</span>s</strong> based on the test/task mode.</p>
+term here. We are talking about <strong><span class="test">test</span><span class="task">task</span>s</strong> based on the test/task mode.</p>
 <div class="language-robotframework highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="gh">*** Test Cases ***</span>
