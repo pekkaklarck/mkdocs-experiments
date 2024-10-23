@@ -1,32 +1,50 @@
-// Show tests/tasks after the mode is changed. On page load styles are updated directly.
-function setTaskMode(enabled) {
-    setTaskDisplay(enabled);
-    setTaskHeaders(enabled);
-    document.querySelector('#rpa-toggle input').checked = enabled;
-    localStorage.setItem('robot-framework-manual-mode', enabled ? 'task' : 'test');
+const MODE_KEY = 'robot-framework-manual-mode';
+
+function toggleTestTaskMode() {
+    const mode = getNewMode();
+    setDisplay(mode);
+    setHeaders(mode);
+    setData(mode);
 }
 
-function setTaskDisplay(enabled) {
+function getNewMode() {
+    const oldMode = localStorage.getItem(MODE_KEY) || 'test';
+    const newMode = oldMode == 'test' ? 'task' : 'test';
+    localStorage.setItem(MODE_KEY, newMode);
+    return newMode;
+}
+
+function setDisplay(mode) {
     for (const test of document.getElementsByClassName('test')) {
-        test.style.display = enabled ? 'none' : 'inline';
+        test.style.display = mode == 'test' ? 'inline' : 'none';
     }
     for (const task of document.getElementsByClassName('task')) {
-        task.style.display = enabled ? 'inline' : 'none';
+        task.style.display = mode == 'task' ? 'inline' : 'none';
     }
 }
 
-function setTaskHeaders(enabled) {
-    const newText = enabled ? '*** Tasks ***' : '*** Test Cases ***';
-    const oldText = enabled ? '*** Test Cases ***' : '*** Tasks ***';
-    for (const header of document.querySelectorAll('.language-robotframework .gh')) {
-        if (header.innerHTML == oldText) {
-            header.innerHTML = newText;
+function setHeaders(mode) {
+    const newHeader = mode == 'test' ? '*** Test Cases ***' : '*** Tasks ***';
+    const oldHeader = mode == 'test' ? '*** Tasks ***' : '*** Test Cases ***';
+    for (const elem of document.querySelectorAll('.language-robotframework .gh')) {
+        if (elem.innerHTML == oldHeader) {
+            elem.innerHTML = newHeader;
         }
     }
 }
 
+function setData(mode) {
+    setAttribute('robot-mode-toggle', 'data-robot-mode', mode);
+    setAttribute('robot-test-icon', 'data-robot-narrow', mode == 'test' ? 'show' : 'hide');
+    setAttribute('robot-task-icon', 'data-robot-narrow', mode == 'task' ? 'show' : 'hide');
+}
+
+function setAttribute(elemId, name, value) {
+    document.getElementById(elemId).setAttribute(name, value);
+}
+
 document$.subscribe(function () {
-    if (localStorage.getItem('robot-framework-manual-mode') == 'task') {
-        setTaskHeaders(true);
+    if (localStorage.getItem(MODE_KEY) == 'task') {
+        setHeaders('task');
     }
 });
