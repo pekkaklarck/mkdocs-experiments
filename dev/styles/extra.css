@@ -1,6 +1,13 @@
 .md-typeset h1, header .md-ellipsis {
     font-family: OCRA;
 }
+.md-tabs__link {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+.md-tabs__item--active .md-tabs__link {
+    font-weight: bold;
+}
 :root {
   --md-primary-fg-color:        #00c0b5;
   --md-primary-fg-color--light: #00c0b5;
