@@ -10,3 +10,23 @@
 {% block announce %}
   📢 &nbsp; New announcement! If dismissed, returns only if changed or there's a new release.
 {% endblock %}
+
+{% block extrahead %}
+<script>
+// Modify styles directly to show tests/tasks correctly when they are loaded.
+function setTaskMode() {
+    const sheet = document.querySelector('link[href*="extra.css"]').sheet;
+    for (const rule of sheet.cssRules) {
+        if (rule.selectorText == '.test') {
+            rule.styleMap.set('display', 'none');
+        }
+        if (rule.selectorText == '.task') {
+            rule.styleMap.set('display', 'inline');
+        }
+    }
+}
+if (localStorage.getItem('robot-framework-manual-mode') == 'task') {
+    setTaskMode();
+}
+</script>
+{% endblock %}
