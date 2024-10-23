@@ -56,7 +56,18 @@
     vertical-align: middle;
     margin: 0;
 }
+#test-mode-icon, #task-mode-icon {
+    padding: 0;
+}
+#test-task-mode-toggle {
+    padding: 0 4px;
+}
 #rpa-toggle .md-icon svg {
-    height: 22px;
-    width: 22px;
+    height: 21px;
+    width: 21px;
+}
+@media (max-width: 600px) {
+    #rpa-toggle div[data-robot-narrow="hide"] {
+        display: none;
+    }
 }

@@ -1,24 +1,35 @@
 {#-
   Toggle for switching between test automation and process automation modes.
 -#}
-<form id="rpa-toggle" autocomplete="off">
-  <div onclick="setTaskMode(false);"
-       title="Set test automation mode"
-       class="md-header__button md-icon">{% include ".icons/fontawesome/solid/bug.svg" %}</div>
-  <div>
+<form id="rpa-toggle" autocomplete="off"
+      class="md-header__button"
+      title="Toggle between test and process automation modes">
+  <div id="test-mode-icon"
+       onclick="toggleTestTaskMode();"
+       class="md-icon"
+       data-robot-narrow="show">
+    {% include ".icons/fontawesome/solid/bug.svg" %}
+  </div>
+  <div id="test-task-mode-toggle"
+       data-robot-narrow="hide">
     <label>
-      <input type="checkbox" onclick="setTaskMode(this.checked);">
-      <span id="rpa-slider" title="Toggle between test automation and process automation modes"></span>
+      <input type="checkbox" onclick="toggleTestTaskMode();">
+      <span id="rpa-slider"></span>
     </label>
   </div>
-  <div onclick="setTaskMode(true);"
-       title="Set process automation mode"
-       class="md-header__button md-icon">{% include ".icons/fontawesome/solid/gear.svg" %}</div>
+  <div id="task-mode-icon"
+       onclick="toggleTestTaskMode();"
+       class="md-icon"
+       data-robot-narrow="hide">
+    {% include ".icons/fontawesome/solid/gear.svg" %}
+  </div>
 </form>
 <script>
-  if (localStorage.getItem('robot-framework-manual-mode') == 'task') {
-      document.querySelector("#rpa-toggle input").checked = true;
-  }
+if (localStorage.getItem('robot-framework-manual-mode') == 'task') {
+    document.querySelector("#rpa-toggle input").checked = true;
+    document.getElementById('test-mode-icon').setAttribute('data-robot-narrow', 'hide');
+    document.getElementById('task-mode-icon').setAttribute('data-robot-narrow', 'show');
+}
 </script>
 
 {#-

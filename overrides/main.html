@@ -14,13 +14,10 @@
 {% block extrahead %}
 <script>
 // Modify styles directly to show tests/tasks correctly when they are loaded.
-function setTaskMode() {
+if (localStorage.getItem('robot-framework-manual-mode') == 'task') {
     const sheet = document.querySelector('link[href*="extra.css"]').sheet;
     sheet.insertRule('.test { display: none; }', sheet.cssRules.length);
     sheet.insertRule('.task { display: inline; }', sheet.cssRules.length);
-}
-if (localStorage.getItem('robot-framework-manual-mode') == 'task') {
-    setTaskMode();
 }
 </script>
 {% endblock %}
