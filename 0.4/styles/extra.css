@@ -7,8 +7,8 @@
   --md-primary-fg-color--dark:  #00c0b5;
 }
 
-# Test/task toggle. Toggle styles are based on
-# https://www.w3schools.com/howto/howto_css_switch.asp
+/* Test/task toggle. Toggle styles are based on
+   https://www.w3schools.com/howto/howto_css_switch.asp */
 .test {
     display: inline;
 }
@@ -51,9 +51,12 @@
 #rpa-toggle input:checked + #rpa-slider:before {
     transform: translateX(18px);
 }
-#rpa-toggle > span {
-    font-size: 0.7rem;
-    padding: 0.2rem;
-    vertical-align: -7px;
-    cursor: pointer;
+#rpa-toggle div {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+#rpa-toggle .md-icon svg {
+    height: 22px;
+    width: 22px;
 }
