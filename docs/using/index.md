@@ -1,7 +1,7 @@
 # Using Robot Framework
 
 Introduction to the usage section. We have another references to the <keyword:>
-term here. We are be talking about **{test}s** based on the test/task mode.
+term here. We are talking about **{test}s** based on the test/task mode.
 
 ```robotframework
 *** Test Cases ***
