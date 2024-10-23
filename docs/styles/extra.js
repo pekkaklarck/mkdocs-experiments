@@ -8,9 +8,10 @@ function toggleTestTaskMode() {
 }
 
 function getNewMode() {
-    const mode = localStorage.getItem(MODE_KEY) == 'task' ? 'test' : 'task';
-    localStorage.setItem(MODE_KEY, mode);
-    return mode;
+    const oldMode = localStorage.getItem(MODE_KEY) || 'test';
+    const newMode = oldMode == 'test' ? 'task' : 'test';
+    localStorage.setItem(MODE_KEY, newMode);
+    return newMode;
 }
 
 function setDisplay(mode) {
@@ -33,15 +34,13 @@ function setHeaders(mode) {
 }
 
 function setData(mode) {
-    if (mode == 'test') {
-        document.querySelector('#rpa-toggle input').checked = false;
-        document.getElementById('test-mode-icon').setAttribute('data-robot-narrow', 'show');
-        document.getElementById('task-mode-icon').setAttribute('data-robot-narrow', 'hide');
-    } else {
-        document.querySelector('#rpa-toggle input').checked = true;
-        document.getElementById('test-mode-icon').setAttribute('data-robot-narrow', 'hide');
-        document.getElementById('task-mode-icon').setAttribute('data-robot-narrow', 'show');
-    }
+    setAttribute('robot-mode-toggle', 'data-robot-mode', mode);
+    setAttribute('robot-test-icon', 'data-robot-narrow', mode == 'test' ? 'show' : 'hide');
+    setAttribute('robot-task-icon', 'data-robot-narrow', mode == 'task' ? 'show' : 'hide');
+}
+
+function setAttribute(elemId, name, value) {
+    document.getElementById(elemId).setAttribute(name, value);
 }
 
 document$.subscribe(function () {
