@@ -24,9 +24,6 @@
     display: inline-block;
     vertical-align: middle;
 }
-#robot-mode-widget:not(:hover) {
-    opacity: 1;
-}
 #robot-mode-toggle {
     position: relative;
     width: 42px;
