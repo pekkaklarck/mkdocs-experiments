@@ -64,7 +64,7 @@ may not be useful.
 Here's a simple Robot Framework example to get us started! :rocket:
 
 ```robotframework
-*** Test Case ***
+*** Test Cases ***
 Example
     Log    Hello, world!    # (1)!
 ```
@@ -150,7 +150,7 @@ Glossary functionality is provided by the
         print(f'Hello, {name}!')
     ```
 
-=== "Test Case"
+=== "{Test}"
 
     ```robotframework
     *** Test Cases ***
