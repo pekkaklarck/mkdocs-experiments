@@ -1007,13 +1007,18 @@ if (localStorage.getItem('robot-framework-manual-mode') == 'task') {
     title="Keywords are very important for us."
     name="_:Keyword"
     href="../glossary/#c45c429a0f7336c4fdeda3e7eee2c5e8">keyword</a>
-term here. We are talking about <strong><span class="test">test</span><span class="task">task</span>s</strong> based on the test/task mode.</p>
+term here. We are talking about <strong><span class="test">tests</span><span class="task">tasks</span></strong> because the test/task switch is in
+<em>the <span class="test">test</span><span class="task">task</span> mode</em>.</p>
 <div class="language-robotframework highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="gh">*** Test Cases ***</span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="gh test">*** Test Cases ***</span><span class="gh task">*** Tasks ***</span><span class="p">    </span><span class="c"># (1)!</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="gu">Example</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">    </span><span class="nf">Log</span><span class="p">   </span><span class="s">Header should be set based on the test/task mode.</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">    </span><span class="nf">Log</span><span class="p">    </span><span class="s">This is a <span class="test">test</span><span class="task">task</span>!</span><span class="p">    </span><span class="c"># (2)!</span>
 </span></code></pre></div></td></tr></table></div>
+<ol>
+<li>Header is set based on the test/task mode (now <span class="test">test</span><span class="task">task</span>).</li>
+<li>This message changes as well.</li>
+</ol>
 
 
 

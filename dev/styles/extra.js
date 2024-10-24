@@ -3,7 +3,6 @@ const MODE_KEY = 'robot-framework-manual-mode';
 function toggleTestTaskMode() {
     const mode = getNewMode();
     setDisplay(mode);
-    setHeaders(mode);
     setData(mode);
 }
 
@@ -23,16 +22,6 @@ function setDisplay(mode) {
     }
 }
 
-function setHeaders(mode) {
-    const newHeader = mode == 'test' ? '*** Test Cases ***' : '*** Tasks ***';
-    const oldHeader = mode == 'test' ? '*** Tasks ***' : '*** Test Cases ***';
-    for (const elem of document.querySelectorAll('.language-robotframework .gh')) {
-        if (elem.innerHTML == oldHeader) {
-            elem.innerHTML = newHeader;
-        }
-    }
-}
-
 function setData(mode) {
     setAttribute('robot-mode-toggle', 'data-robot-mode', mode);
     setAttribute('robot-test-icon', 'data-robot-narrow', mode == 'test' ? 'show' : 'hide');
@@ -42,9 +31,3 @@ function setData(mode) {
 function setAttribute(elemId, name, value) {
     document.getElementById(elemId).setAttribute(name, value);
 }
-
-document$.subscribe(function () {
-    if (localStorage.getItem(MODE_KEY) == 'task') {
-        setHeaders('task');
-    }
-});

@@ -24,8 +24,10 @@
     display: inline-block;
     vertical-align: middle;
 }
-#robot-mode-widget:not(:hover) {
-    opacity: 1;
+@media (hover: none) {
+    #robot-mode-widget {
+        opacity: 1;
+    }
 }
 #robot-mode-toggle {
     position: relative;

@@ -1138,7 +1138,7 @@ To see the source code, click the edit button on right or go to the
 <a class="magiclink magiclink-github magiclink-repository" href="https://github.com/pekkaklarck/mkdocs-experiments" title="GitHub Repository: pekkaklarck/mkdocs-experiments">pekkaklarck/mkdocs-experiments</a> repository.</p>
 <h2 id="test-or-task">Test or task?<a class="headerlink" href="#test-or-task" title="Permanent link">&para;</a></h2>
 <p>Use the toggle in the header to choose the mode and the following two chapters are
-changed based on that. The first chapter uses <code>{test}</code> markup that's rendered like
+changed based on that. The first chapter uses <code><span class="test">test</span><span class="task">task</span></code> markup that's rendered like
 <code>test</code> or <code>task</code> based  on the mode. The second chapter and the associated example
 are replaced altogether.</p>
 <p>Should we use <span class="test">test</span><span class="task">task</span>? <strong><span class="test">Test</span><span class="task">Task</span>s</strong> we shall use!</p>
@@ -1146,7 +1146,7 @@ are replaced altogether.</p>
 We love bugs! <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M256 0c53 0 96 43 96 96v3.6c0 15.7-12.7 28.4-28.4 28.4H188.5c-15.7 0-28.4-12.7-28.4-28.4V96c0-53 43-96 96-96zM41.4 105.4c12.5-12.5 32.8-12.5 45.3 0l64 64c.7.7 1.3 1.4 1.9 2.1 14.2-7.3 30.4-11.4 47.5-11.4h112c17.1 0 33.2 4.1 47.5 11.4.6-.7 1.2-1.4 1.9-2.1l64-64c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-64 64c-.7.7-1.4 1.3-2.1 1.9 6.2 12 10.1 25.3 11.1 39.5h64.3c17.7 0 32 14.3 32 32s-14.3 32-32 32h-64c0 24.6-5.5 47.8-15.4 68.6q3.3 1.95 6 4.8l64 64c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0l-63.1-63.1c-24.5 21.8-55.8 36.2-90.3 39.6V240c0-8.8-7.2-16-16-16s-16 7.2-16 16v239.2c-34.5-3.4-65.8-17.8-90.3-39.6l-63.1 63c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l64-64c1.9-1.9 3.9-3.4 6-4.8C101.5 367.8 96 344.6 96 320H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h64.3c1.1-14.1 5-27.5 11.1-39.5-.7-.6-1.4-1.2-2.1-1.9l-64-64c-12.5-12.5-12.5-32.8 0-45.3z"/></svg></span></p>
 <div class="language-robotframework test highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="gh">*** Test Cases ***</span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="gh test">*** Test Cases ***</span><span class="gh task">*** Tasks ***</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="gu">Testing example</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">    </span><span class="nf">Log</span><span class="p">    </span><span class="s">Hello, testers!</span>
 </span></code></pre></div></td></tr></table></div>
@@ -1162,7 +1162,7 @@ based on the mode.</p>
 <div class="language-robotframework highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="gh">*** Test Cases ***</span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="gh test">*** Test Cases ***</span><span class="gh task">*** Tasks ***</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="gu">Example for all</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">    [</span><span class="kn">Documentation</span><span class="p">]    </span><span class="s">Only the header changes!</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">    </span><span class="nf">Log</span><span class="p">    </span><span class="s">Hello, world!</span>
@@ -1230,7 +1230,7 @@ may not be useful.</p>
 <p>Here's a simple Robot Framework example to get us started! <img alt="🚀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f680.svg" title=":rocket:" /></p>
 <div class="language-robotframework highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="gh">*** Test Case ***</span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="gh test">*** Test Cases ***</span><span class="gh task">*** Tasks ***</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="gu">Example</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="p">    </span><span class="nf">Log</span><span class="p">    </span><span class="s">Hello, world!</span><span class="p">    </span><span class="c"># (1)!</span>
 </span></code></pre></div></td></tr></table></div>
@@ -1294,7 +1294,7 @@ refer to a term specified as <code>Library keyword</code> like <a class="mkdocs-
 <p>Glossary functionality is provided by the
 <a href="https://github.com/realtimeprojects/mkdocs-ezglossary">mkdocs-ezglossary</a> plugin.</p>
 <h2 id="tabs">Tabs<a class="headerlink" href="#tabs" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Tab 1</label><label for="__tabbed_1_2">Tab 2</label><label for="__tabbed_1_3">Library</label><label for="__tabbed_1_4">Test Case</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Tab 1</label><label for="__tabbed_1_2">Tab 2</label><label for="__tabbed_1_3">Library</label><label for="__tabbed_1_4"><span class="test">Test</span><span class="task">Task</span></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Tabs can be really useful for us!</p>
@@ -1317,7 +1317,7 @@ refer to a term specified as <code>Library keyword</code> like <a class="mkdocs-
 <div class="tabbed-block">
 <div class="language-robotframework highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="gh">*** Test Cases ***</span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="gh test">*** Test Cases ***</span><span class="gh task">*** Tasks ***</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="gu">Example</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="p">    </span><span class="nf">Greet</span><span class="p">    </span><span class="s">Robot</span>
 </span></code></pre></div></td></tr></table></div>
