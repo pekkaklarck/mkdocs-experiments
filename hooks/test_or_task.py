@@ -34,7 +34,7 @@ def handle_test_marker(html: str) -> str:
         test = match.group(1)
         lower = [c.islower() for c in test]
         task = ''.join(c if low else c.upper() for c, low in zip('tasks', lower))
-        return (f'<span class="test">{test}</span><span class="task">{task}</span>')
+        return f'<span class="test">{test}</span><span class="task">{task}</span>'
 
     return re.sub(r'(?i)(?<!`)\{(tests?)}', handle_marker, html)
 
