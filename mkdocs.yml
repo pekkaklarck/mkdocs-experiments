@@ -116,7 +116,6 @@ plugins:
       inline_refs: list
 
 hooks:
-  - hooks/set_homepage_share_title.py
   - hooks/test_or_task.py
 
 extra:
