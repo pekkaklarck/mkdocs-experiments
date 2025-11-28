@@ -93,7 +93,7 @@ plugins:
         python:
           paths:
             - src
-          import:
+          inventories:
             - https://docs.python.org/3/objects.inv
           options:
             inherited_members: true
